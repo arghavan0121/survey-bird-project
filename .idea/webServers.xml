@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="82727e80-fc97-4617-ad9e-2c5bb94e082d" name="porseman" url="http://ftp.ielts-mashhad.com">
+        <fileTransfer host="ftp.ielts-mashhad.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="420dd3df-e79b-410f-b82f-630166f7fd6b" name="Tagline" url="http://xaankoo.com">
+        <fileTransfer host="xaankoo.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
