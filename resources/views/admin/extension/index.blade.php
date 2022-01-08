@@ -35,12 +35,16 @@
                                     </thead>
                                     <tbody>
                                         @foreach($extensions as $extension)
+
                                             <tr>
                                                 <td><a href="/admin/extensions/{{ strtolower($extension->code) }}">{{ $extension->name }}</a></td>
                                                 <td>{{ $extension->code }}</td>
                                                 <td>{{ $extension->description }}</td>
                                                 <td>{{ $extension->version }}</td>
-                                                <td>{{ $extension->created_at->format('d/m/Y') }}</td>
+                                                @php
+                                                    $extension=$extension->created_at = new Verta($extension->created_at);
+                                                @endphp
+                                                <td>{{ $extension->format('Y/m/d')}}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>

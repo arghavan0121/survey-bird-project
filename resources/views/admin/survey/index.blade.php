@@ -46,7 +46,7 @@
                                                 <td>{{ ($survey->visibility == 1) ? 'فعال' : 'غیرفعال' }}</td>
                                                 <td>{{ $survey->responses_count }}</td>
                                                 <td>{{ $survey->questions_count }}</td>
-                                                <td>{{ date('d M, Y', strtotime($survey->created_at)) }}</td>
+                                                <td>{{ $survey->created_at->format('Y/m/d') }}</td>
                                                 <td><a class="fas fa-edit" href="{{ route('admin.surveys.edit', $survey) }}"></a></td>
                                             </tr>
                                         @endforeach

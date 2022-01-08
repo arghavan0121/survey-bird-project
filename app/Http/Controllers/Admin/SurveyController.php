@@ -5,12 +5,16 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SurveyForm;
 use App\Models\Survey;
-
+use Verta;
 class SurveyController extends Controller
 {
     public function index()
     {
         $surveys = Survey::orderBy('created_at', 'desc')->get();
+        foreach ($surveys as $survey){
+            $survey->created_at = new Verta($survey->created_at) ;
+        }
+
 
         return view('admin.survey.index', compact('surveys'));
     }

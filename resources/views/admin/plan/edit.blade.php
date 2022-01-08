@@ -15,7 +15,7 @@
                             @method('PUT')
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="title" class="col-sm-3 col-form-label text-sm-right">{{ __('عنوان') }}</label>
+                                    <label for="title" class="col-sm-3 col-form-label ">{{ __('عنوان') }}</label>
                                     <div class="col-sm-5">
                                         <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $plan->title) }}">
                                         @error('title')
@@ -27,7 +27,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="code" class="col-sm-3 col-form-label text-sm-right">{{ __('توضیحات') }}</label>
+                                    <label for="code" class="col-sm-3 col-form-label ">{{ __('توضیحات') }}</label>
                                     <div class="col-sm-5">
                                         <textarea class="form-control @error('description') is-invalid @enderror" rows="3" name="description">{{ old('description', $plan->description) }}</textarea>
                                         @error('description')
@@ -39,7 +39,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="code" class="col-sm-3 col-form-label text-sm-right">{{ __('کد') }}</label>
+                                    <label for="code" class="col-sm-3 col-form-label ">{{ __('کد') }}</label>
                                     <div class="col-sm-6">
                                         <input type="code" class="form-control @error('code') is-invalid @enderror" name="code" value="{{ old('code', $plan->code) }}">
                                         @error('code')
@@ -51,7 +51,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="price" class="col-sm-3 col-form-label text-sm-right">{{ __('هزینه') }}</label>
+                                    <label for="price" class="col-sm-3 col-form-label ">{{ __('هزینه') }}</label>
                                     <div class="col-sm-6">
                                         <input type="price" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price', $plan->price) }}">
                                         @error('price')
@@ -63,7 +63,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="code" class="col-sm-3 col-form-label text-sm-right">{{ __('شناسه طرح') }}</label>
+                                    <label for="code" class="col-sm-3 col-form-label ">{{ __('شناسه طرح') }}</label>
                                     <div class="col-sm-4">
                                         <input type="text" class="form-control @error('stripe_plan_id') is-invalid @enderror" name="stripe_plan_id" value="{{ old('stripe_plan_id',$plan->stripe_plan_id) }}">
                                         @error('stripe_plan_id')
@@ -75,7 +75,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="interval" class="col-sm-3 col-form-label text-sm-right">{{ __('نوع اشتراک') }}</label>
+                                    <label for="interval" class="col-sm-3 col-form-label ">{{ __('نوع اشتراک') }}</label>
                                     <div class="col-sm-6">
                                         <select class="form-control @error('interval') is-invalid @enderror" name="interval">
                                             <option {{ old('interval',$plan->interval) == 'monthly'? 'selected':'' }} value="monthly">{{ __('ماهانه') }}</option>
@@ -91,7 +91,7 @@
 
 
                                 <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label text-sm-right">{{ __('تعداد نظرسنجی') }}</label>
+                                    <label class="col-sm-3 col-form-label ">{{ __('تعداد نظرسنجی') }}</label>
                                     <div class="col-sm-6">
                                         <input type="text"
                                             class="form-control @error('survey_count') is-invalid @enderror"
@@ -103,7 +103,7 @@
                                     </div>
                                 </div>
                                  <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label text-sm-right">{{ __('تعداد سوالات در هر نظرسنجی') }}</label>
+                                    <label class="col-sm-3 col-form-label ">{{ __('تعداد سوالات در هر نظرسنجی') }}</label>
                                     <div class="col-sm-6">
                                         <input type="text"
                                             class="form-control @error('question_count_per_survey') is-invalid @enderror"
@@ -117,7 +117,7 @@
 
                                 <div class="form-group row">
                                     <label
-                                        class="col-sm-3 col-form-label text-sm-right">{{ __('تعداد پاسخ در هر نظرسنجی') }}</label>
+                                        class="col-sm-3 col-form-label ">{{ __('تعداد پاسخ در هر نظرسنجی') }}</label>
                                     <div class="col-sm-6">
                                         <input type="text"
                                             class="form-control @error('response_count_per_survey') is-invalid @enderror"

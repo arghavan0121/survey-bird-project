@@ -15,7 +15,7 @@
                             {{csrf_field()}}
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="title" class="col-sm-3 col-form-label text-sm-right">{{ __('عنوان') }}</label>
+                                    <label for="title" class="col-sm-3 col-form-label ">{{ __('عنوان') }}</label>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}">
                                         @error('title')
@@ -27,7 +27,8 @@
                                 </div>
 
                                  <div class="form-group row">
-                                    <label for="code" class="col-sm-3 col-form-label text-sm-right">{{ __('متن ') }}</label>
+                                    <label for="code" class="col-sm-3 col-form-label
+">{{ __('متن ') }}</label>
                                     <div class="col-sm-6">
                                         <textarea class="form-control @error('body') is-invalid @enderror" rows="3" name="body">{{ old('body') }}</textarea>
                                         @error('body')

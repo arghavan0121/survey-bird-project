@@ -15,7 +15,7 @@
                             @method('PUT')
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="name" class="col-sm-3 col-form-label text-sm-right">{{ __('نام') }}</label>
+                                    <label for="name" class="col-sm-3 col-form-label ">{{ __('نام') }}</label>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name', $user->name) }}">
                                         @error('name')
@@ -27,7 +27,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="name" class="col-sm-3 col-form-label text-sm-right">{{ __('ایمیل') }}</label>
+                                    <label for="name" class="col-sm-3 col-form-label">{{ __('ایمیل') }}</label>
                                     <div class="col-sm-6">
                                         <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email', $user->email) }}">
                                         @error('email')
@@ -39,7 +39,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="password" class="col-sm-3 col-form-label text-sm-right">{{ __('رمز عبور') }}</label>
+                                    <label for="password" class="col-sm-3 col-form-label">{{ __('رمز عبور') }}</label>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control @error('password') is-invalid @enderror" name="password">
                                         @error('password')
@@ -52,7 +52,7 @@
 
                                  <div class="form-group row">
                                     <label for="status"
-                                    class="col-sm-3 col-form-label text-sm-right">{{ __('زبان موردنظر')}}</label>
+                                    class="col-sm-3 col-form-label ">{{ __('زبان موردنظر')}}</label>
                                     <div class="col-sm-6">
                                         <select class="form-control @error('language_id') is-invalid @enderror" name="language_id">
                                             @foreach($languages as $language)

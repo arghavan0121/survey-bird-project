@@ -38,7 +38,7 @@ class ExtensionController extends Controller
 
         setting()->set('envato_purchase_code', $request->input('envato_purchase_code'));
 
-        flash(__('Changes added successfully.'), 'success');
+        flash(__('تغییرات با موفقیت اضافه شد.'), 'success');
 
         return redirect()->back();
     }
@@ -46,7 +46,7 @@ class ExtensionController extends Controller
     public function download(Request $request)
     {
         if (is_null(setting()->get('envato_purchase_code'))) {
-            flash(__('Please provide your Purchase Code in the box below.'), 'error');
+            flash(__('لطفا کد خرید خود را در کادر زیر وارد کنید.'), 'error');
 
             return redirect()->route('admin.extensions.create');
         }

@@ -1,6 +1,7 @@
 @extends('layouts.admin', ['title' => 'Users'])
 
 @section('content')
+
 <div class="content-wrapper">
     <section class="content-header">
         <div class="container-fluid">
@@ -33,12 +34,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+{{--                                date('d M, Y', strtotime($user->created_at))--}}
                                     @foreach ($users as $key => $user)
                                     <tr>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
-                                        <td>{{ date('d M, Y', strtotime($user->created_at)) }}</td>
-                                        <td>{{ date('d M, Y', strtotime($user->updated_at)) }}</td>
+                                        <td>{{ $user->created_at->format('Y/m/d') }}</td>
+                                        <td>{{ $user->updated_at->format('Y/m/d') }}</td>
                                         <td><a class="fas fa-edit" href="{{ route('admin.users.edit', $user) }}"></a></td>
                                     </tr>
                                     @endforeach

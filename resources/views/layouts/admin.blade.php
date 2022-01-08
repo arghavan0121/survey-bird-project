@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link href="{{ asset('backend/plugins/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/css/adminlte.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('backend/css/adminlte.rtl.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/plugins/toastr/toastr.min.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/css/custom.css') }}" rel="stylesheet">
 
@@ -23,9 +24,10 @@
     <script src="{{ asset('backend/js/adminlte.min.js') }}" defer></script>
     <script src="{{ asset('backend/js/chart.min.js') }}"></script>
     <script src="{{ asset('backend/js/custom.js') }}" defer></script>
+
 </head>
 
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini"dir="rtl">
     <div class="wrapper">
         @include('admin.shared.sidebar')
         @include('admin.shared.header')

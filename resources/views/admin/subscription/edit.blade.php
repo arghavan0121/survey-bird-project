@@ -18,7 +18,7 @@
                             <div class="card-body">
                                 <div class="form-group row">
                                     <label for="plan_id"
-                                        class="col-sm-3 col-form-label text-sm-right"> {{__('طرح')}}</label>
+                                        class="col-sm-3 col-form-label "> {{__('طرح')}}</label>
                                     <div class="col-sm-6">
                                         <select class="form-control" name="plan_id">
                                             @foreach($plans as $plan)
@@ -32,7 +32,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="name" class="col-sm-3 col-form-label text-sm-right">{{ __('زمان شروع') }}</label>
+                                    <label for="name" class="col-sm-3 col-form-label ">{{ __('زمان شروع') }}</label>
                                     <div class="col-sm-4">
                                          <input type="date" class="form-control {{ $errors->has('starts_at') ? ' is-invalid' : '' }}" name="starts_at" value="{{ old('starts_at', $subscription->starts_at?$subscription->starts_at->format('Y-m-d'):'') }}">             @if ($errors->has('starts_at'))
                                             <span class="invalid-feedback d-block" role="alert">
@@ -43,7 +43,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="name" class="col-sm-3 col-form-label text-sm-right">{{ __('زمان پایان') }}</label>
+                                    <label for="name" class="col-sm-3 col-form-label ">{{ __('زمان پایان') }}</label>
                                     <div class="col-sm-4">
                                         <input type="date" class="form-control {{ $errors->has('ends_at') ? ' is-invalid' : '' }}" name="ends_at"  value="{{ old('ends_at', $subscription->ends_at?$subscription->ends_at->format('Y-m-d'):'') }}">
                                         @if ($errors->has('ends_at'))

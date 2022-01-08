@@ -50,8 +50,12 @@
                                         <tr>
                                             <td>{{ $subscription->user->name }}</td>
                                             <td>{{ $subscription->plan->title }} </td>
-                                            <td>{{ date('d M, Y', strtotime($subscription->starts_at)) }}</td>
-                                            <td>{{ date('d M, Y', strtotime($subscription->ends_at)) }}</td>
+                                            @php
+                                                $starts=$subscription->starts_at = new Verta($subscription->starts_at);
+                                                $ends=$subscription->ends_at = new Verta($subscription->ends_at);
+                                            @endphp
+                                            <td>{{$starts->format('Y/m/d') }}</td>
+                                            <td>{{$ends->format('Y/m/d') }}</td>
                                             <td><a class="fas fa-edit" href="{{ route('admin.subscriptions.edit', $subscription) }}"></a></td>
                                         </tr>
                                     @endforeach

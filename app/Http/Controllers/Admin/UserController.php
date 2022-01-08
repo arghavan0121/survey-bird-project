@@ -6,13 +6,18 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\UserForm;
 use App\Models\Language;
 use App\User;
+use Verta;
 
 class UserController extends Controller
 {
     public function index()
     {
         $users = User::role('company')->orderBy('created_at', 'desc')->get();
-
+        foreach ($users as $user )
+        {
+            $user->created_at = new Verta($user->created_at) ;
+            $user->updated_at = new Verta($user->updated_at) ;
+        }
         return view('admin.user.index', compact('users'));
     }
 

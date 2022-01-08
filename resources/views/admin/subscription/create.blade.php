@@ -16,7 +16,7 @@
 
                                 <div class="form-group row">
                                     <label for="plan_id"
-                                        class="col-sm-3 col-form-label text-sm-right"> {{__('طرح')}}</label>
+                                        class="col-sm-3 col-form-label "> {{__('طرح')}}</label>
                                     <div class="col-sm-4">
                                         <select class="form-control" name="plan_id">
                                             <option selected disabled>{{ __('انتخاب طرح') }}</option>
@@ -35,7 +35,7 @@
 
                                 <div class="form-group row">
                                     <label for="plan_id"
-                                        class="col-sm-3 col-form-label text-sm-right"> {{__('کاربر')}}</label>
+                                        class="col-sm-3 col-form-label "> {{__('کاربر')}}</label>
                                     <div class="col-sm-4">
                                         <select class="form-control" name="user_id">
                                             <option selected disabled>{{ __('انتخاب کاربر') }}</option>
@@ -53,7 +53,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="name" class="col-sm-3 col-form-label text-sm-right">{{ __('تاریخ شروع') }}</label>
+                                    <label for="name" class="col-sm-3 col-form-label ">{{ __('تاریخ شروع') }}</label>
                                     <div class="col-sm-4">
                                          <input type="date" class="form-control {{ $errors->has('starts_at') ? ' is-invalid' : '' }}" name="starts_at" value="{{ old('starts_at') }}">
                                          @if ($errors->has('starts_at'))
@@ -65,7 +65,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="name" class="col-sm-3 col-form-label text-sm-right">{{ __('تاریخ پایان') }}</label>
+                                    <label for="name" class="col-sm-3 col-form-label ">{{ __('تاریخ پایان') }}</label>
                                     <div class="col-sm-4">
                                         <input type="date" class="form-control {{ $errors->has('ends_at') ? ' is-invalid' : '' }}" name="ends_at"  value="{{ old('ends_at') }}">
                                         @if ($errors->has('ends_at'))
@@ -77,7 +77,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="select" class="col-sm-3 col-form-label text-sm-right"></label>
+                                    <label for="select" class="col-sm-3 col-form-label "></label>
                                     <div class="col-sm-6">
                                         <button type="submit" class="btn btn-primary">{{ __('ارسال') }}</button>
                                     </div>
