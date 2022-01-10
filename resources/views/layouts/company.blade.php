@@ -8,7 +8,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('company/plugins/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('landing/css/bootstrap-rtl.min.css') }}">
     <link href="{{ asset('company/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css') }}" rel="stylesheet">
     <link href="{{ asset('company/plugins/toastr/toastr.min.css') }}" rel="stylesheet">
     <link href="{{ asset('company/css/adminlte.min.css') }}" rel="stylesheet">
@@ -20,7 +19,7 @@
 
     @livewireStyles
 </head>
-<body class="hold-transition layout-top-nav">
+<body class="hold-transition layout-top-nav" dir="rtl">
     <script src="https://js.stripe.com/v3/"></script>
 
     <div class="wrapper">

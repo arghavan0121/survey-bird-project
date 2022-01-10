@@ -21,5 +21,15 @@
     color: #666;
     font-weight: 500;
 }
+.main-header{
+    display: none;
+}
+
+
+@media (max-width: 992px) {
+    .main-header{
+        display: block;
+    }
+}
 
 

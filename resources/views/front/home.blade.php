@@ -42,8 +42,8 @@
     </nav>
     <!--Navbar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
-        <div class="container">
-            <a class="navbar-brand" href="#">
+        <div class="container cont">
+            <a class="navbar-brand nav-brand" href="#">
                 <img src="{{ asset('logos/landing-page-logo.png') }}" class="img-fluid">
             </a>
             <button type="button" id="sidebarCollapse" class="btn d-lg-none p-0 bg-transparent">

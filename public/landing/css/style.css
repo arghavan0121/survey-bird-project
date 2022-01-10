@@ -95,6 +95,17 @@ a:hover {
   border-bottom: 1px solid #362725;
 }
 
+
+
+@media (max-width: 992px) {
+  .nav-brand{
+  margin-left:0 !important;
+ }
+}
+
+
+
+
 .header {
   overflow: hidden;
   position: relative;
@@ -657,7 +668,7 @@ a:hover {
   width: 0px;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   border-right: 1px solid #d7d7d7;
   height: 100vh;
   z-index: 9999;

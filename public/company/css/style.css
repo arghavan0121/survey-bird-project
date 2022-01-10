@@ -1,5 +1,5 @@
 ul {
-  padding-left: 0;
+  padding-right: 0;
   list-style-type: none;
 }
 
@@ -371,13 +371,13 @@ textarea { resize: none; }
 }
 
 .not-message {
-  text-decoration:none !important; 
+  text-decoration:none !important;
   color: #0f5132 !important;
 }
 
 .not-mark-read{
   text-decoration:none !important;
-  color: #007bff !important; 
+  color: #007bff !important;
   float: right !important;
 }
 
@@ -405,12 +405,12 @@ textarea { resize: none; }
 }
 
 .drop-billing {
-  left: 0px; 
+  left: 0px;
   right: inherit;
 }
 
 .pro-right {
-  left: inherit; 
+  left: inherit;
   right: 0px;
 }
 

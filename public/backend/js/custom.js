@@ -3,6 +3,7 @@
 
     // Users
     if($('#chart-users').length > 0) {
+
         var barChart1 = {
             labels: userChart.labels,
             datasets: [{

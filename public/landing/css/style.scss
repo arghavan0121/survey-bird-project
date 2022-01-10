@@ -411,6 +411,7 @@ h2 {
     padding-left: 50px;
     padding-right: 50px;
     background: #fff;
+      flex-flow: row-reverse;
   }
 
   .brands_slider {
@@ -594,7 +595,7 @@ h2 {
   border-right: 1px solid $white2;
   height: 100vh;
   z-index: 9999;
-  background: $white;
+  background: red;
   transition: all 0.3s;
   &.active {
     // margin-left: -250px !important;
@@ -730,3 +731,5 @@ h2 {
     }
   }
 }
+
+
