@@ -57,7 +57,7 @@ class SubscriptionController extends Controller
             ]);
         }
 
-        flash(__('Subscription added successfully.'), 'success');
+        flash(__('اشتراک با موفقیت اضافه شد.'), 'success');
 
         return redirect()->route('admin.subscriptions.index');
     }
@@ -75,7 +75,7 @@ class SubscriptionController extends Controller
     {
         $subscription->update($request->validated());
 
-        flash(__('Subscription updated successfully.'), 'success');
+        flash(__('اشتراک با موفقیت به روز شد.'), 'success');
 
         return redirect()->route('admin.subscriptions.index');
     }

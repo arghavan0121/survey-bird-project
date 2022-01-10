@@ -122,7 +122,7 @@ class InstallApplicationController extends Controller
         try {
             DB::connection()->getPdo();
         } catch (\Exception $e) {
-            flash(__('Could not connect to the database.  Please check your configuration. error:'). $e);
+            flash(__('نمی توان به پایگاه داده متصل شد. لطفا تنظیمات خود را بررسی کنید. error:'). $e);
 
             return false;
         }

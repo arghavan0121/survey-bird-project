@@ -21,9 +21,9 @@ class SurveyController extends Controller
 
         $survey = Survey::create([
             'user_id' => auth()->user()->id,
-            'title' => __('Untitled'),
-            'welcome_message' => __('Welcome to our survey.'),
-            'goodbye_text' => __('Thanks for your time.'),
+            'title' => __('بدون عنوان'),
+            'welcome_message' => __('به نظرسنجی ما خوش آمدید'),
+            'goodbye_text' => __('ممنون بابت وقتی که گذاشتید.'),
             'visibility' => 0,
         ]);
 
@@ -95,7 +95,7 @@ class SurveyController extends Controller
     {
         $survey->delete();
 
-        flash(__('Survey deleted successfully.'))->success();
+        flash(__('نظرسنجی با موفقیت حذف شد.'))->success();
 
         return redirect()->route('company.surveys.index');
     }

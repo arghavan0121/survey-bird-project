@@ -1,7 +1,7 @@
 @extends('layouts.company')
 
 @section('content')
-<div class="content-header text-right">
+<div class="content-header text-center">
 	<div class="container">
 
 		<div class="row mb-2">
@@ -19,7 +19,7 @@
 			<div class="col-lg-12">
 				<div class="card">
 					<div class="card-header">
-						<h5 class="card-title m-0"><strong>{{ __('نظرسنجی های شما') }}</strong></h5>
+						<h5 class="card-title m-0 float-right"><strong>{{ __('نظرسنجی های شما') }}</strong></h5>
 					</div>
 					<div class="card-body table-responsive p-0">
 						@includeWhen($surveys->isEmpty(), 'company.shared.empty', [
@@ -45,7 +45,10 @@
 											<td><span class="badge @if($survey->visibility) bg-success @else bg-warning @endif">@if($survey->visibility) فعال @else غیرفعال @endif</span></td>
 											<td>{{ $survey->questions_count }}</td>
 											<td>{{ $survey->responses_count }}</td>
-											<td>{{ $survey->created_at }}</td>
+                                            @php
+                                                $survey=$survey->created_at = new Verta($survey->created_at);
+                                            @endphp
+											<td>{{ $survey}}</td>
 											<td>
                                             <form method="POST" action="{{ route('company.surveys.destroy',$survey) }}">
                                                 @csrf

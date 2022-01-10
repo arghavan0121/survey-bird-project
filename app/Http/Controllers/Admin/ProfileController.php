@@ -35,7 +35,7 @@ class ProfileController extends Controller
 
         $user->update();
 
-        flash(__('Profile updated successfully.'), 'success');
+        flash(__('نمایه با موفقیت به روز شد.'), 'success');
 
         return redirect()->route('admin.profile.edit');
     }

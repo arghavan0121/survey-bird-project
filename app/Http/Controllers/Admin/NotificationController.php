@@ -26,7 +26,7 @@ class NotificationController extends Controller
 
         Notification::send($users, new AdminNotification($request->title, $request->body));
 
-        flash(__('Notification sent'), 'success');
+        flash(__('اعلان ارسال شد'), 'success');
 
         return redirect()->back();
     }

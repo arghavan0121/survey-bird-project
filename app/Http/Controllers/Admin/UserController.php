@@ -38,7 +38,7 @@ class UserController extends Controller
         }
         $user->update();
 
-        flash(__('User updated successfully.'), 'success');
+        flash(__('کاربر با موفقیت به روز شد.'), 'success');
 
         return redirect()->route('admin.users.index');
     }
@@ -47,7 +47,7 @@ class UserController extends Controller
     {
         $user->delete();
 
-        flash(__('User deleted successfully.'), 'success');
+        flash(__('کاربر با موفقیت حذف شد.'), 'success');
 
         return redirect()->route('admin.users.index');
     }

@@ -16,7 +16,7 @@ class NoActiveSubscription
     public function handle($request, Closure $next)
     {
         if (!auth()->user()->subscription()->exists() || !auth()->user()->subscription->active()) {
-            flash(__('You do not have an active subscription'), 'error');
+            flash(__('شما اشتراک فعال ندارید'), 'error');
 
             return redirect()->route('company.billing.plans');
         }

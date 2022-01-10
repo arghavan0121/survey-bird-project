@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
+    'failed' => 'این اعتبارنامه ها با سوابق ما مطابقت ندارد.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];

@@ -12,27 +12,27 @@ class ArtisanCommandsController extends Controller
     {
         $commands = [
             [
-                'title' => __('Flush the application cache'),
+                'title' => __('کش برنامه را شستشو دهید'),
                 'command' => 'cache:clear',
             ],
 
             [
-                'title' => __('Create the symbolic links configured for the application'),
+                'title' => __('پیوندهای نمادین پیکربندی شده برای برنامه را ایجاد کنید'),
                 'command' => 'storage:link',
             ],
 
             [
-                'title' => __('Remove the configuration cache'),
+                'title' => __('کش تنظیمات را حذف کنید'),
                 'command' => 'config:clear',
             ],
 
             [
-                'title' => __('Remove the route cache file'),
+                'title' => __('فایل کش مسیر را حذف کنید'),
                 'command' => 'route:clear',
             ],
 
             [
-                'title' => __('Migrate the database'),
+                'title' => __('پایگاه داده را عوض کنید'),
                 'command' => 'migrate',
             ],
         ];
@@ -46,7 +46,7 @@ class ArtisanCommandsController extends Controller
 
         Artisan::call($command);
 
-        flash(__('Executed the command - php artisan').$command);
+        flash(__('دستور - php artisan را اجرا کرد').$command);
 
         return redirect()->back();
     }

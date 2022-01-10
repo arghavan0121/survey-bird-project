@@ -12,8 +12,8 @@ class SettingsController extends Controller
     {
         $settings = [
             [
-                'title' => __('Account Setting'),
-                'description' => 'Update your email, name, password, etc',
+                'title' => __('تنظیمات حساب کاربری'),
+                'description' => 'ایمیل، نام، رمز عبور و غیره خود را به روز کنید',
                 'route' => route('admin.profile.edit'),
             ],
 

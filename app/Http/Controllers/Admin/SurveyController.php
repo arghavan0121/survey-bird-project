@@ -28,7 +28,7 @@ class SurveyController extends Controller
     {
         $survey->update($request->validated());
 
-        flash(__('Survey updated successfully.'), 'success');
+        flash(__('نظرسنجی با موفقیت به روز شد.'), 'success');
 
         return redirect()->route('admin.surveys.index');
     }
@@ -37,7 +37,7 @@ class SurveyController extends Controller
     {
         $survey->delete();
 
-        flash(__('Survey deleted successfully.'), 'success');
+        flash(__('نظرسنجی با موفقیت حذف شد.'), 'success');
 
         return redirect()->route('admin.surveys.index');
     }

@@ -38,7 +38,7 @@ class PlanController extends Controller
 
         $this->addPlanFeatures($plan, $this->getPlanInputs($request));
 
-        flash(__('Plan added successfully.'), 'success');
+        flash(__('طرح با موفقیت اضافه شد.'), 'success');
 
         return redirect()->route('admin.plans.index');
     }
@@ -59,7 +59,7 @@ class PlanController extends Controller
 
         $this->addPlanFeatures($plan, $this->getPlanInputs($request));
 
-        flash(__('Plan updated successfully.'), 'success');
+        flash(__('طرح با موفقیت به روز شد.'), 'success');
 
         return redirect()->route('admin.plans.index');
     }
@@ -70,7 +70,7 @@ class PlanController extends Controller
 
         $plan->delete();
 
-        flash(__('Plan deleted successfully.'), 'success');
+        flash(__('طرح با موفقیت حذف شد.'), 'success');
 
         return redirect()->route('admin.plans.index');
     }

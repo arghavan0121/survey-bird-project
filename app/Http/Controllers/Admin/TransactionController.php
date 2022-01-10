@@ -30,7 +30,7 @@ class TransactionController extends Controller
 
         $transaction->update($validatedData);
 
-        flash(__('Payment Request updated successfully.'), 'success');
+        flash(__('درخواست پرداخت با موفقیت به روز شد.'), 'success');
 
         return redirect()->route('admin.transactions.index');
     }

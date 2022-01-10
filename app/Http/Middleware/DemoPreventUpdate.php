@@ -18,7 +18,7 @@ class DemoPreventUpdate
     {
         if (App::environment('demo')) {
             if (in_array($request->method(), ['POST', 'PUT', 'DELETE'])) {
-                flash('This action is disabled in the demo version.', 'error');
+                flash('این عمل در نسخه دمو غیرفعال است.', 'error');
 
                 return redirect()->back();
             }

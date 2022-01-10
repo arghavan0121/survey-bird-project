@@ -11,7 +11,7 @@ class SurveyPolicy
     public function create(User $user)
     {
         if (! $user->subscribed()) {
-            return Response::deny(__('You do not have an active subscription'));
+            return Response::deny(__('شما اشتراک فعال ندارید'));
         }
 
         $planLimit = $user->subscription

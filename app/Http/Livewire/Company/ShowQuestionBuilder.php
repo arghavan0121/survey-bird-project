@@ -69,16 +69,16 @@ class ShowQuestionBuilder extends Component
         $this->reassignChoices();
 
         if($this->image) {
-            
+
             $this->validate([
                'image' => 'image|mimes:jpg,jpeg,png,svg,gif|max:2048',
-            ],['image.image' => 'The file must be of image type'
+            ],['image.image' => 'فایل باید از نوع تصویر باشد'
             ]);
 
             $filename = $this->image->store('questions','public');
             $this->activeQuestion->image = $filename;
         }
-        
+
         $this->activeQuestion->save();
 
         $this->reset('image');
@@ -118,7 +118,7 @@ class ShowQuestionBuilder extends Component
 
             $this->showQuestion($question);
         } catch (\Exception $e) {
-            $this->dispatchBrowserEvent('alert', 
+            $this->dispatchBrowserEvent('alert',
                 ['type' => 'warning',  'message' => $e->getMessage()]);
         }
     }

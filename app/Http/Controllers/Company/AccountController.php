@@ -28,7 +28,7 @@ class AccountController extends Controller
 
         $user->update();
 
-        flash()->success(__('Account Details Updated Successfully.'), 'success');
+        flash()->success(__('جزئیات حساب با موفقیت به روز شد.'), 'success');
 
         return redirect()->back();
     }

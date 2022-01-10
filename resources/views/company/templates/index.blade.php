@@ -16,7 +16,7 @@
 			<div class="col-lg-12">
 				<div class="card">
 					<div class="card-header">
-						<h5 class="card-title m-0"><strong>{{ __('گالری قالب ها') }}</strong></h5>
+						<h5 class="card-title m-0 float-right"><strong>{{ __('گالری قالب ها') }}</strong></h5>
 					</div>
 					<div class="card-body table-responsive">
 						@if(!$templates->isEmpty())
@@ -25,8 +25,8 @@
                                     <div class="col-sm-4">
                                         <div class="card">
                                             <div class="card-body">
-                                                <h5 class="card-title mb-2"><strong>{{ $template->title }}</strong></h5>
-                                                <p class="card-text">{{ $template->welcome_message }}</p>
+                                                <h5 class="card-title mb-2 float-right"><strong>{{ $template->title }}</strong></h5>
+                                                <p class="card-text text-center">{{ $template->welcome_message }}</p>
                                                 <form action="{{ route('company.surveys.duplicate', $template) }}" method="POST">
                                                     @csrf
                                                     <button type="submit" class="btn btn-info w-100">{{ __('از این قالب استفاده کنید') }}</button>

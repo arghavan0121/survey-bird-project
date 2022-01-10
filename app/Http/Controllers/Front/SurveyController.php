@@ -160,7 +160,7 @@ class SurveyController extends Controller
         }
 
         return back()->withErrors([
-            'password' => __('The password is incorrect')
+            'password' => __('رمز عبور نادرست است')
         ]);
     }
 }

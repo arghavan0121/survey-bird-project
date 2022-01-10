@@ -47,7 +47,7 @@ class LanguageController extends Controller
 
         $language->save();
 
-        flash(__('Language created successfully.'), 'success');
+        flash(__('زبان با موفقیت ایجاد شد.'), 'success');
 
         return redirect()->route('admin.language.index');
     }
@@ -88,7 +88,7 @@ class LanguageController extends Controller
 
         $language->update();
 
-        flash(__('Language updated successfully.'), 'success');
+        flash(__('زبان با موفقیت به روز شد.'), 'success');
 
         return redirect()->route('admin.language.index');
     }
@@ -101,12 +101,12 @@ class LanguageController extends Controller
     public function destroy(Language $language)
     {
         if (1 == $language->id) {
-            return redirect()->route('admin.language.index')->with('warning', 'not permission to delete');
+            return redirect()->route('admin.language.index')->with('warning', 'اجازه حذف نیست');
         }
 
         $language->delete();
 
-        flash(__('Language deleted successfully.'), 'success');
+        flash(__('زبان با موفقیت حذف شد.'), 'success');
 
         return redirect()->route('admin.language.index');
     }

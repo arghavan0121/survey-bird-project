@@ -7,11 +7,11 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">{{ __('طرح اشتراک فعلی') }}</h3>
+            <h3 class="card-title float-right">{{ __('طرح اشتراک فعلی') }}</h3>
         </div>
         <div class="card-body p-0">
             <table class="table table-hover">
-                <tbody>
+                <tbody class="text-center">
                     <tr>
                         <td width="25%" class="text-muted border-0">{{ __('طرح') }}</td>
                         <td width="75%" class="border-0">{{ $subscription->plan->title }}</td>
@@ -31,21 +31,29 @@
                     @if ($subscription->starts_at)
                         <tr>
                             <td class="text-muted">{{ __('شروع دوره فعلی') }}</td>
-                            <td>{{ $subscription->starts_at }}</td>
+                            @php
+                                $starts=$subscription->starts_at = new Verta($subscription->starts_at);@endphp
+                            <td>{{ $starts }}</td>
                         </tr>
                     @endif
 
                     @if ($subscription->ends_at)
                         <tr>
                             <td class="text-muted">{{ __('پایان دوره فعلی') }}</td>
-                            <td>{{ $subscription->ends_at }}</td>
+                            @php
+                                $ends=$subscription->ends_at = new Verta($subscription->ends_at);
+                            @endphp
+                            <td>{{ $ends }}</td>
                         </tr>
                     @endif
 
                     @if ($subscription->canceled_at)
                         <tr>
                             <td class="text-muted">{{ __('تاریخ لغو') }}</td>
-                            <td>{{ $subscription->canceled_at }}</td>
+                            @php
+                                $canceled=$subscription->canceled_at = new Verta($subscription->canceled_at);
+                            @endphp
+                            <td>{{ $canceled }}</td>
                         </tr>
                     @endif
                 </tbody>
