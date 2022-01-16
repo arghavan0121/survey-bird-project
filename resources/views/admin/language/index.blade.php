@@ -7,7 +7,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <a href="{{ route('admin.language.create') }}"
-                    class="btn btn-primary float-sm-right">{{ __('افزودن زبان') }}</a>
+                    class="btn btn-primary float-sm-left">{{ __('افزودن زبان') }}</a>
                 </div>
             </div>
         </div>

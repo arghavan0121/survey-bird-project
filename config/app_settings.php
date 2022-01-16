@@ -3,10 +3,10 @@
 return [
         'sections' => [
             'general' => [
-                'title' => 'General',
+                'title' => 'عمومی',
                 'inputs' => [
                     [
-                        'label' => 'Application Name',
+                        'label' => 'نام وبسایت',
                         'key' => 'APP_NAME',
                         'storage' => 'env',
                         'type' => 'text',
@@ -14,7 +14,7 @@ return [
                     ],
 
                     [
-                        'label' => 'Environment',
+                        'label' => 'محیط',
                         'key' => 'APP_ENV',
                         'storage' => 'env',
                         'type' => 'text',
@@ -22,7 +22,7 @@ return [
                     ],
 
                     [
-                        'label' => 'Debug Level',
+                        'label' => 'سطح اشکال زدایی',
                         'key' => 'APP_DEBUG',
                         'storage' => 'env',
                         'type' => 'text',
@@ -30,7 +30,7 @@ return [
                     ],
 
                     [
-                        'label' => 'Application URL',
+                        'label' => 'مسیر وبسایت',
                         'key' => 'APP_URL',
                         'storage' => 'env',
                         'type' => 'text',
@@ -40,10 +40,10 @@ return [
             ],
 
             'mail' => [
-                'title' => 'Email',
+                'title' => 'ایمیل',
                 'inputs' => [
                     [
-                        'label' => 'Driver',
+                        'label' => 'راننده',
                         'key' => 'MAIL_DRIVER',
                         'storage' => 'env',
                         'type' => 'text',
@@ -51,7 +51,7 @@ return [
                     ],
 
                     [
-                        'label' => 'Host',
+                        'label' => 'میزبان',
                         'key' => 'MAIL_HOST',
                         'storage' => 'env',
                         'type' => 'text',
@@ -59,7 +59,7 @@ return [
                     ],
 
                     [
-                        'label' => 'Port',
+                        'label' => 'درگاه',
                         'key' => 'MAIL_PORT',
                         'storage' => 'env',
                         'type' => 'text',
@@ -67,7 +67,7 @@ return [
                     ],
 
                     [
-                        'label' => 'Username',
+                        'label' => 'نام کاربری',
                         'key' => 'MAIL_USERNAME',
                         'storage' => 'env',
                         'type' => 'text',
@@ -75,7 +75,7 @@ return [
                     ],
 
                     [
-                        'label' => 'Password',
+                        'label' => 'رمز عبور',
                         'key' => 'MAIL_PASSWORD',
                         'storage' => 'env',
                         'type' => 'text',
@@ -83,7 +83,7 @@ return [
                     ],
 
                     [
-                        'label' => 'Encryption',
+                        'label' => 'رمزگذاری',
                         'key' => 'MAIL_ENCRYPTION',
                         'storage' => 'env',
                         'type' => 'text',
@@ -93,10 +93,10 @@ return [
             ],
 
             'localization' => [
-                'title' => 'Localization',
+                'title' => 'بومی سازی',
                 'inputs' => [
                     [
-                        'label' => 'Currency',
+                        'label' => 'واحد پول',
                         'key' => 'currency',
                         'storage' => 'database',
                         'type' => 'text',

@@ -39,8 +39,8 @@
                                     <tr>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
-                                        <td>{{ $user->created_at->format('Y/m/d') }}</td>
-                                        <td>{{ $user->updated_at->format('Y/m/d') }}</td>
+                                        <td>{{ Hekmatinasser\Verta\Verta::instance($user->created_at)->formatDate() }}</td>
+                                        <td>{{ Hekmatinasser\Verta\Verta::instance($user->updated_at)->formatDate() }}</td>
                                         <td><a class="fas fa-edit" href="{{ route('admin.users.edit', $user) }}"></a></td>
                                     </tr>
                                     @endforeach

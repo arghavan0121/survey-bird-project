@@ -34,7 +34,7 @@
                                 <div class="form-group row">
                                     <label for="name" class="col-sm-3 col-form-label ">{{ __('زمان شروع') }}</label>
                                     <div class="col-sm-4">
-                                         <input type="date" class="form-control {{ $errors->has('starts_at') ? ' is-invalid' : '' }}" name="starts_at" value="{{ old('starts_at', $subscription->starts_at?$subscription->starts_at->format('Y-m-d'):'') }}">             @if ($errors->has('starts_at'))
+                                         <input data-jdp placeholder="YYYY/mm/dd" class="form-control {{ $errors->has('starts_at') ? ' is-invalid' : '' }}" name="starts_at" value="{{ old('starts_at', $subscription->starts_at?$subscription->starts_at->format('Y-m-d'):'') }}">             @if ($errors->has('starts_at'))
                                             <span class="invalid-feedback d-block" role="alert">
                                                 <strong>{{ $errors->first('starts_at') }}</strong>
                                             </span>
@@ -69,4 +69,18 @@
         </div>
     </section>
 </div>
+
+
+<script>
+    jalaliDatepicker.startWatch({
+        separatorChar: "/",
+        minDate: "attr",
+        maxDate: "attr",
+        changeMonthRotateYear: true,
+        showTodayBtn: true,
+        showEmptyBtn: true
+    });
+
+    document.getElementById("aaa").addEventListener("jdp:change", function (e) { console.log(e) });
+</script>
 @endsection

@@ -17,7 +17,7 @@
 
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="name" class="col-sm-3 col-form-label text-sm-right">{{ __('نام') }}</label>
+                                    <label for="name" class="col-sm-3 col-form-label text-sm-left">{{ __('نام') }}</label>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}"
                                         name="name" value="{{ old('name', $language->name) }}">
@@ -30,7 +30,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="name" class="col-sm-3 col-form-label text-sm-right">{{ __('کد') }}</label>
+                                    <label for="name" class="col-sm-3 col-form-label text-sm-left">{{ __('کد') }}</label>
                                     <div class="col-sm-6">
                                         <input type="text"
                                         class="form-control{{ $errors->has('code') ? ' is-invalid' : '' }}"
@@ -45,7 +45,7 @@
 
                                 <div class="form-group row">
                                     <label for="select"
-                                    class="col-sm-3 col-form-label text-sm-right">{{ __('وضعیت') }}</label>
+                                    class="col-sm-3 col-form-label text-sm-left">{{ __('وضعیت') }}</label>
                                     <div class="col-sm-6">
                                         <select class="form-control {{ $errors->has('status') ? ' is-invalid' : '' }}"name="status">
                                             <option {{ old('status', $language->status) == 1 ? 'selected' : '' }} value="1">

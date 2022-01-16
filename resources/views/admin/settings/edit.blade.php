@@ -16,7 +16,7 @@
                                 <div class="card-body">
                                     @foreach($section['inputs'] as $input)
                                         <div class="form-group row">
-                                            <label for="{{ $input['key'] }}" class="col-sm-3 col-form-label text-sm-right">{{ $input['label'] }}</label>
+                                            <label for="{{ $input['key'] }}" class="col-sm-3 col-form-label text-sm-left">{{ $input['label'] }}</label>
                                             <div class="{{ $input['class'] }}">
                                                 @includeIf('admin.settings.inputs.' . $input['type'])
                                             </div>

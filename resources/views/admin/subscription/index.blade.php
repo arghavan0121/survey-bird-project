@@ -7,10 +7,10 @@
 
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <a href="{{ route('admin.subscriptions.create') }}" class="btn btn-primary float-sm-right">{{ __('افزودن اشتراک') }}</a>
+                    <a href="{{ route('admin.subscriptions.create') }}" class="btn btn-primary float-sm-left">{{ __('افزودن اشتراک') }}</a>
                     <div class="dropdown show">
-                        <a class="btn btn-custom dropdown-toggle float-sm-right" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ __('فیلتر') }}</a>
-                        <div class="dropdown-menu text-right" aria-labelledby="dropdownMenuLink">
+                        <a class="btn btn-custom dropdown-toggle float-sm-left" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ __('فیلتر') }}</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <a class="dropdown-item" href="{{ url()->current().'?'.http_build_query(array_merge(request()->except('page'),['status' => 'active'])) }}">{{ __('فعال') }}</a>
                             <a class="dropdown-item" href="{{ url()->current().'?'.http_build_query(array_merge(request()->except('page'),['status' => 'ended'])) }}">{{ __('اتمام') }}</a>
                             <a class="dropdown-item" href="{{ url()->current().'?'.http_build_query(array_merge(request()->except('page'),['status' => 'canceled'])) }}">{{ __('غیرفعال') }}</a>
@@ -50,12 +50,9 @@
                                         <tr>
                                             <td>{{ $subscription->user->name }}</td>
                                             <td>{{ $subscription->plan->title }} </td>
-                                            @php
-                                                $starts=$subscription->starts_at = new Verta($subscription->starts_at);
-                                                $ends=$subscription->ends_at = new Verta($subscription->ends_at);
-                                            @endphp
-                                            <td>{{$starts->format('Y/m/d') }}</td>
-                                            <td>{{$ends->format('Y/m/d') }}</td>
+
+                                            <td>{{ Hekmatinasser\Verta\Verta::instance($subscription->starts_at)->formatDate() }}</td>
+                                            <td>{{ Hekmatinasser\Verta\Verta::instance($subscription->ends_at)->formatDate() }}</td>
                                             <td><a class="fas fa-edit" href="{{ route('admin.subscriptions.edit', $subscription) }}"></a></td>
                                         </tr>
                                     @endforeach

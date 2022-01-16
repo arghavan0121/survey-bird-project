@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Language Lines
@@ -13,7 +12,6 @@ return [
     |
     */
 
-    'failed' => 'این اعتبارنامه ها با سوابق ما مطابقت ندارد.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-
+    'failed'   => 'مشخصات وارد شده با اطلاعات ما سازگار نیست.',
+    'throttle' => 'دفعات تلاش شما برای ورود بیش از حد مجاز است. لطفا پس از :seconds ثانیه مجددا تلاش فرمایید.',
 ];

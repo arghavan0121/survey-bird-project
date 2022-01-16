@@ -16,7 +16,7 @@
                             @method('PUT')
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="name" class="col-sm-3 col-form-label text-sm-right">{{ __('نام') }}</label>
+                                    <label for="name" class="col-sm-3 col-form-label text-sm-left">{{ __('نام') }}</label>
                                     <div class="col-sm-6">
                                         <input type="text"
                                             class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
@@ -30,7 +30,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="name" class="col-sm-3 col-form-label text-sm-right">{{ __('ایمیل') }}</label>
+                                    <label for="name" class="col-sm-3 col-form-label text-sm-left">{{ __('ایمیل') }}</label>
                                     <div class="col-sm-6">
                                         <input type="email"
                                             class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
@@ -44,7 +44,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="password" class="col-sm-3 col-form-label text-sm-right">{{ __('رمز عبور') }}</label>
+                                    <label for="password" class="col-sm-3 col-form-label text-sm-left">{{ __('رمز عبور') }}</label>
                                     <div class="col-sm-6">
                                         <input type="password"
                                             class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
@@ -59,7 +59,7 @@
 
                                  <div class="form-group row">
                                     <label for="plan_id"
-                                        class="col-sm-3 col-form-label text-sm-right"> {{ __('زبان') }}</label>
+                                        class="col-sm-3 col-form-label text-sm-left"> {{ __('زبان') }}</label>
                                     <div class="col-sm-6">
                                         <select class="form-control" name="language_id">
                                             @foreach($languages as $language)
@@ -78,7 +78,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="select" class="col-sm-3 col-form-label text-sm-right"></label>
+                                    <label for="select" class="col-sm-3 col-form-label text-sm-left"></label>
                                     <div class="col-sm-6">
                                         <button type="submit"
                                             class="btn btn-primary">{{ __('ارسال') }}</button>

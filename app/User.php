@@ -22,6 +22,7 @@ class User extends Authenticatable
         'password',
         'language_id',
         'plan_id',
+        'updated_at',
     ];
 
     /**

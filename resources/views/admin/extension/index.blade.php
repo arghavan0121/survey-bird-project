@@ -8,7 +8,7 @@
 
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <a href="{{ route('admin.extensions.create') }}" class="btn btn-primary float-sm-right">{{ __('نصب برنامه') }}</a>
+                    <a href="{{ route('admin.extensions.create') }}" class="btn btn-primary float-sm-left">{{ __('نصب برنامه') }}</a>
                 </div>
             </div>
         </div>

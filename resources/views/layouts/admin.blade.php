@@ -8,6 +8,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name') }} | {{ $title ?? '' }}</title>
 
+
+
+
     <link rel="stylesheet" href="{{ asset('backend/css/google.css') }}">
 
     <!-- Styles -->
@@ -17,13 +20,37 @@
     <link href="{{ asset('backend/plugins/toastr/toastr.min.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/css/custom.css') }}" rel="stylesheet">
 
+
+    <script src="{{ asset('backend/js/datepicker.js') }}"></script>
+
+
+    <link type="text/css" rel="stylesheet" href="{{ asset('backend/css/jalalidatepicker.css') }}" />
+    <script src="{{ asset('backend/js/jalalidatepicker.js') }}"></script>
+    <script src="https://unpkg.com/jalali-moment/dist/jalali-moment.browser.js"></script>
+
+    <!--For datapicker -->
+
+    <link href="{{ asset('backend/css/persian.datepicker.css') }}" rel="stylesheet">
+
+        <script src="{{ asset('backend/js/persian-date.js') }}"></script>
+        <script src="{{ asset('backend/js/persian-date.min.js') }}"></script>
+{{--    <link href="{{ asset('backend/css/pickr.min.css') }}" rel="stylesheet">--}}
+{{--    <link href="{{ asset('backend/css/daterangepicker.min.css') }}" rel="stylesheet">--}}
+{{--    <script src="{{ asset('backend/js/daterangepicker.min.js') }}"></script>--}}
+{{--    <script src="{{ asset('backend/js/picker.min.js') }}"></script>--}}
+
     <!-- Scripts -->
     <script src="{{ asset('backend/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('backend/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
     <script src="{{ asset('backend/plugins/toastr/toastr.min.js') }}"></script>
     <script src="{{ asset('backend/js/adminlte.min.js') }}" defer></script>
     <script src="{{ asset('backend/js/chart.min.js') }}"></script>
     <script src="{{ asset('backend/js/custom.js') }}" defer></script>
+
+
+
+
 
 </head>
 

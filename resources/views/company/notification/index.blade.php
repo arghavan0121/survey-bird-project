@@ -8,7 +8,7 @@
 			<div class="col-lg-12">
 				<div class="card">
 					<div class="card-header">
-						<h5 class="card-title m-0"><strong>{{ __('اعلان ها') }}</strong></h5>
+						<h5 class="card-title "><strong>{{ __(' اعلان ها ') }}</strong></h5>
                         <i class="fa fa-bell not-bell" aria-hidden="true"></i>
 					</div>
 					<div class="card-body table-responsive">

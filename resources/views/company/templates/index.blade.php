@@ -8,7 +8,7 @@
 			<div class="col-sm-9 float-right">
 				<form action="{{ route('company.surveys.store') }}" method="POST">
 					@csrf
-					<button type="submit" class="btn btn-primary float-right mr-2">{{ __('ایجاد نظرسنجی خالی') }}</button>
+					<button type="submit" class="btn btn-primary float-sm-right">{{ __('ایجاد نظرسنجی خالی') }}</button>
 				</form>
 			</div>
 		</div>

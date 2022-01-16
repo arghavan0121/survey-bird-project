@@ -15,13 +15,13 @@
 
 <body>
     <nav id="sidebar">
-        <div class="sidebar-header">
-            <h5 class="mb-0">Survey Bird</h5>
+        <div class="sidebar-header text-right">
+            <h5 class="mb-0">پرنده نظرسنجی</h5>
         </div>
 
         <ul class="list-unstyled components text-right">
             <li class="nav-item">
-                <a href="#">صفحه اصلی</a>
+                <a class="nav-link px-3" href="#">صفحه اصلی</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link px-3" href="#service">امکانات</a>
@@ -31,13 +31,13 @@
             </li>
         </ul>
         <div class="px-3 pb-3 w-250 text-right">
-            <p><a href="#">شرایط و ضوابط</a></p>
-            <p><a href="#">سیاست حفظ حریم خصوصی</a></p>
-            <p><a href="#">سوالات متداول</a></p>
+            <p><a class="nav-link px-3" href="#">شرایط و ضوابط</a></p>
+            <p><a class="nav-link px-3" href="#">سیاست حفظ حریم خصوصی</a></p>
+            <p><a class="nav-link px-3" href="#">سوالات متداول</a></p>
         </div>
         <div class="d-flex px-3 w-250">
-            <a href="{{ route('login') }}" class="btn btn-primary btn-sm">ورود</a>
-            <a href="{{ route('register') }}" class="btn btn-outline-primary btn-sm ml-3">ثبت نام</a>
+            <a href="{{ route('login') }}" class="btn btn-primary btn-sm ml-3">ورود</a>
+            <a href="{{ route('register') }}" class="btn btn-outline-primary btn-sm">ثبت نام</a>
         </div>
     </nav>
     <!--Navbar-->
@@ -205,7 +205,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-lg-3 text-right">
                         <div class="widget widget-about">
-                            <h3>پرنده نظرسنجی</h3>
+                            <h3>پرسمان</h3>
                             <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
 
                             <div class="social-icons">

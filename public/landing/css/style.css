@@ -665,7 +665,7 @@ a:hover {
 }
 
 #sidebar {
-  width: 0px;
+  width: 0;
   position: fixed;
   top: 0;
   right: 0;
@@ -873,3 +873,9 @@ a:hover {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/*Custom css code - start*/
+@media (min-width: 720px) and (max-width: 1920px) {
+    #sidebar {display: none !important;}
+}
+/*Custom css code - end*/

@@ -3,9 +3,10 @@
 namespace App\Http\Requests;
 
 use Auth;
+use Carbon\Carbon;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Request;
-
+use Hekmatinasser\Verta\Verta;
 class SubscriptionForm extends FormRequest
 {
     /**
@@ -26,6 +27,11 @@ class SubscriptionForm extends FormRequest
     public function rules()
     {
         $user = Auth::user();
+
+        $gregorianDate= Verta::parse(Request::all()['starts_at'])->formatGregorian('m/d/Y');
+        $starts_at = Carbon::parse($gregorianDate);
+
+        dd(Request::all());
 
         if ('PUT' == Request::method()) {
             return [

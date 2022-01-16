@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\User;
 use Carbon\Carbon;
+use Verta;
 use App\Models\Plan;
 use App\Models\Subscription;
 use Illuminate\Http\Request;
@@ -41,8 +42,13 @@ class SubscriptionController extends Controller
         return view('admin.subscription.create', compact('plans', 'users'));
     }
 
-    public function store(SubscriptionForm $request)
+    public function store(Request $request)
     {
+
+
+        $gregorianDate= Verta::parse($request->starts_at)->formatGregorian('m/d/Y');
+        $starts_at = Carbon::parse($gregorianDate);
+//        dd($starts_at);
         $plan = Plan::findOrFail($request->plan_id);
         $user = User::findOrFail($request->user_id);
 
@@ -52,7 +58,7 @@ class SubscriptionController extends Controller
             Subscription::create([
                 'user_id' => $user->id,
                 'plan_id' => $plan->id,
-                'starts_at' => $request->starts_at,
+                'starts_at' =>$request->starts_at,
                 'ends_at' => $request->ends_at,
             ]);
         }

@@ -7,7 +7,7 @@
 
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <a href="{{ route('admin.plans.create') }}" class="btn btn-primary float-sm-right">{{ __('افزودن طرح') }}</a>
+                    <a href="{{ route('admin.plans.create') }}" class="btn btn-primary float-sm-left">{{ __('افزودن طرح') }}</a>
                 </div>
             </div>
         </div>

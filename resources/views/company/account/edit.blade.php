@@ -18,7 +18,7 @@
 								<label for="name" class="col-sm-3 text-sm-right col-form-label">
 									{{ __('نام') }}</label>
 								<div class="col-sm-6">
-									<input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name', $user->name) }}">
+									<input type="text" class="form-control text-sm-left @error('name') is-invalid @enderror" name="name" value="{{ old('name', $user->name) }}">
 									@error('name')
 									<span class="invalid-feedback" role="alert">
 										<strong>{{ $message }}</strong>
@@ -29,7 +29,7 @@
 							<div class="form-group row">
 								<label for="email" class="col-sm-3 text-sm-right col-form-label">{{ __('ایمیل') }}</label>
 								<div class="col-sm-6">
-									<input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email', $user->email) }}">
+									<input type="email" class="form-control text-sm-left @error('email') is-invalid @enderror" name="email" value="{{ old('email', $user->email) }}">
 									@error('email')
 									<span class="invalid-feedback" role="alert">
 										<strong>{{ $message }}</strong>
@@ -40,7 +40,7 @@
 							<div class="form-group row">
 								<label for="password" class="col-sm-3 text-sm-right col-form-label">{{ __('رمز عبور') }}</label>
 								<div class="col-sm-6">
-									<input type="password" class="form-control @error('password') is-invalid @enderror" name="password">
+									<input type="password" class="form-control text-sm-left @error('password') is-invalid @enderror" name="password">
 									@error('password')
 									<span class="invalid-feedback" role="alert">
 										<strong>{{ $message }}</strong>

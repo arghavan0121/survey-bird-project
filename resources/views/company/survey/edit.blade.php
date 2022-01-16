@@ -53,7 +53,7 @@
 												<label for="redirect_url" class="col-sm-3 text-sm-right col-form-label">{{ __('تغییر مسیر') }}</label>
 												<div class="col-sm-6">
 													<input type="text" class="form-control @error('redirect_url') is-invalid @enderror" name="redirect_url" value="{{ old('redirect_url', $survey->redirect_url) }}">
-													<small class="form-text text-muted">{{ __('Redirect on completion') }}</small>
+													<small class="form-text text-muted">{{ __('پس از تکمیل، تغییر مسیر دهید') }}</small>
 													@error('redirect_url')
 														<span class="invalid-feedback" role="alert">
 															<strong>{{ $message }}</strong>

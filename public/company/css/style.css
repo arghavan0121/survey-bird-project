@@ -3,6 +3,10 @@ ul {
   list-style-type: none;
 }
 
+body{
+ text-align:right;
+}
+
 .nav-link .fa-user-circle {
   font-size: 25px;
 }
@@ -424,3 +428,16 @@ textarea { resize: none; }
   -o-object-fit: contain;
      object-fit: contain;
 }
+
+.not-mark-read{
+  float: left !important;
+}
+
+.card-title{
+  float: right!important;
+}
+
+.not-bell{
+  float: left !important;
+}
+

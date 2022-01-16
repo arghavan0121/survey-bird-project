@@ -17,9 +17,9 @@
     <footer>
         <div class="container">
             <div class="col-md-12 text-center">
-                <h6>{{ __('Powered By') }}</h6>
+                <h6>{{ __('پشتیبانی شده توسط') }}</h6>
                 <img src="{{ asset('logos/main-logo.png') }}" class="img-fluid">
-                <h6 class="mb-0">{{ __('Easily create surveys, quizzes, and polls.') }}</h6>
+                <h6 class="mb-0">{{ __('به راحتی نظرسنجی و آزمایش ایجاد کنید.') }}</h6>
             </div>
         </div>
     </footer>
@@ -32,7 +32,7 @@
     <script src="{{ asset('frontend/js/rangeslider.js') }}"></script>
     <script src="{{ asset('frontend/js/custom.js') }}"></script>
     <script>
-       
+
     </script>
 </body>
 </html>

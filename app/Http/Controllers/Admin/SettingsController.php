@@ -13,43 +13,43 @@ class SettingsController extends Controller
         $settings = [
             [
                 'title' => __('تنظیمات حساب کاربری'),
-                'description' => 'ایمیل، نام، رمز عبور و غیره خود را به روز کنید',
+                'description' => 'ایمیل، نام، رمز عبور و غیره خود را به روز کنید.',
                 'route' => route('admin.profile.edit'),
             ],
 
             [
-                'title' => __('General'),
-                'description' => 'Update the application name, URL, etc',
+                'title' => __('عمومی'),
+                'description' => 'نام برنامه، URL و غیره را به روز کنید.',
                 'route' => route('admin.settings.edit', 'general'),
             ],
 
             [
-                'title' => __('Email (SMTP)'),
-                'description' => 'Update email SMTP configurations',
+                'title' => __('ایمیل '),
+                'description' => 'تنظیمات SMTP ایمیل را به روز کنید.',
                 'route' => route('admin.settings.edit', 'mail'),
             ],
 
             [
-                'title' => __('Languages'),
-                'description' => 'Create, update, delete application languages',
+                'title' => __('زبان ها'),
+                'description' => 'ایجاد، به روز رسانی، حذف زبان های برنامه.',
                 'route' => route('admin.language.index'),
             ],
 
             [
-                'title' => __('Localization'),
-                'description' => 'Update the application locale',
+                'title' => __('بومی سازی'),
+                'description' => 'محلی برنامه را به روز کنید.',
                 'route' => route('admin.settings.edit', 'localization'),
             ],
 
             [
-                'title' => __('Artisan Commands'),
-                'description' => 'Run the Artisan commands',
+                'title' => __('دستورات سازنده'),
+                'description' => '.دستورات Artisan را اجرا کنید',
                 'route' => route('admin.commands.index'),
             ],
 
             [
-                'title' => __('Language Translation'),
-                'description' => 'Translate the application language',
+                'title' => __('ترجمه زبان'),
+                'description' => 'زبان برنامه را ترجمه کنید.',
                 'route' => '/admin/translations',
             ],
         ];
@@ -60,7 +60,6 @@ class SettingsController extends Controller
     public function edit($sectionId)
     {
         $section = config('app_settings.sections')[$sectionId];
-
         return view('admin.settings.edit', [
             'section' => $section,
             'sectionId' => $sectionId,
@@ -97,6 +96,7 @@ class SettingsController extends Controller
             }
 
             if ('database' == $input['storage']) {
+
                 $settings[$input['key']] = settings()->get($input['key']);
             }
         }

@@ -16,6 +16,7 @@
         "jquery": "^3.2",
         "laravel-mix": "^5.0.1",
         "lodash": "^4.17.19",
+        "persian-date": "^1.1.0",
         "popper.js": "^1.12",
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.20.1",
@@ -24,6 +25,8 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "jalali-moment": "^3.3.10",
+        "md.bootstrappersiandatetimepicker": "^4.1.1",
         "persian-datepicker": "^1.2.0"
     }
 }
