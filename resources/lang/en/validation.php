@@ -191,6 +191,6 @@ return [
         'button_color'		    =>'رنگ دکمه',
         'button_text_color'	    =>'رنگ  متن دکمه',
         'background_color'	    =>'رنگ  پس زمینه',
-        'yesterday'	            =>'دیروز'
+        'after:yesterday'	     =>'دیروز'
     ],
 ];

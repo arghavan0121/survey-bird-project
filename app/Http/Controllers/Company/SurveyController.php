@@ -93,6 +93,7 @@ class SurveyController extends Controller
 
     public function destroy(Survey $survey)
     {
+
         $survey->delete();
 
         flash(__('نظرسنجی با موفقیت حذف شد.'))->success();

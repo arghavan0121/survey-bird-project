@@ -42,13 +42,9 @@ class SubscriptionController extends Controller
         return view('admin.subscription.create', compact('plans', 'users'));
     }
 
-    public function store(Request $request)
+    public function store(SubscriptionForm $request)
     {
 
-
-        $gregorianDate= Verta::parse($request->starts_at)->formatGregorian('m/d/Y');
-        $starts_at = Carbon::parse($gregorianDate);
-//        dd($starts_at);
         $plan = Plan::findOrFail($request->plan_id);
         $user = User::findOrFail($request->user_id);
 
@@ -62,7 +58,6 @@ class SubscriptionController extends Controller
                 'ends_at' => $request->ends_at,
             ]);
         }
-
         flash(__('اشتراک با موفقیت اضافه شد.'), 'success');
 
         return redirect()->route('admin.subscriptions.index');

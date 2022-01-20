@@ -45,10 +45,8 @@
 											<td><span class="badge @if($survey->visibility) bg-success @else bg-warning @endif">@if($survey->visibility) فعال @else غیرفعال @endif</span></td>
 											<td>{{ $survey->questions_count }}</td>
 											<td>{{ $survey->responses_count }}</td>
-                                            @php
-                                                $survey=$survey->created_at = new Verta($survey->created_at);
-                                            @endphp
-											<td>{{ $survey}}</td>
+
+											<td>{{ Hekmatinasser\Verta\Verta::instance($survey->created_at)->formatDate() }}</td>
 											<td>
                                             <form method="POST" action="{{ route('company.surveys.destroy',$survey) }}">
                                                 @csrf

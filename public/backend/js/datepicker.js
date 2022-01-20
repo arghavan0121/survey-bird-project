@@ -1,5 +1,5 @@
 'use strict';
-$(document).ready(function () {
+    $(document).ready(function () {
 	$('input[name="date_finish"]').datepicker({
 		dateFormat: "yy/mm/dd",
 		showOtherMonths: true,

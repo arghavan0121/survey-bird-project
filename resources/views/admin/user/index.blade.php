@@ -34,7 +34,6 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-{{--                                date('d M, Y', strtotime($user->created_at))--}}
                                     @foreach ($users as $key => $user)
                                     <tr>
                                         <td>{{ $user->name }}</td>

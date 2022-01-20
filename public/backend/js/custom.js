@@ -7,7 +7,7 @@
         var barChart1 = {
             labels: userChart.labels,
             datasets: [{
-                label: 'Users',
+                label: 'کاربران',
                 backgroundColor: 'rgba(60,141,188,0.9)',
                 borderColor: 'rgba(60,141,188,0.8)',
                 pointRadius: false,

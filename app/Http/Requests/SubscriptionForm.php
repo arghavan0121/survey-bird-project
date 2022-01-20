@@ -28,17 +28,13 @@ class SubscriptionForm extends FormRequest
     {
         $user = Auth::user();
 
-        $gregorianDate= Verta::parse(Request::all()['starts_at'])->formatGregorian('m/d/Y');
-        $starts_at = Carbon::parse($gregorianDate);
-
-        dd(Request::all());
-
         if ('PUT' == Request::method()) {
             return [
                 'plan_id' => ['required', 'string'],
                 'starts_at' => ['nullable', 'date', 'after:yesterday'],
                 'ends_at' => ['nullable', 'date', 'after:starts_at'],
             ];
+
         }
 
         if ('POST' == Request::method()) {

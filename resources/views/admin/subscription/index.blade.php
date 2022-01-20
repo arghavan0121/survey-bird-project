@@ -47,6 +47,7 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($subscriptions as $subscription)
+
                                         <tr>
                                             <td>{{ $subscription->user->name }}</td>
                                             <td>{{ $subscription->plan->title }} </td>

@@ -10,7 +10,7 @@
                         <div class="card-header">
                             <h3 class="card-title">{{ __('افزودن اشتراک') }}</h3>
                         </div>
-                        <form method="POST"  action="{{ route('admin.subscriptions.store')}}" >
+                        <form method="POST"   action="{{ route('admin.subscriptions.store')}}" >
                             {{csrf_field()}}
                             <div class="card-body">
 
@@ -57,25 +57,8 @@
                                     <div class="col-sm-4">
                                   <input data-jdp placeholder="YYYY/mm/dd"  class="form-control {{ $errors->has('starts_at') ? ' is-invalid' : '' }}" id="start" value="{{ old('starts_at') }}" onchange="console.log">
 
-                                  <input data-jdp hidden  class="form-control {{ $errors->has('starts_at') ? ' is-invalid' : '' }}" name="starts_at" value="" onchange="console.log" id="countdown_end_date">
+                                  <input data-jdp hidden  class="form-control {{ $errors->has('starts_at') ? ' is-invalid' : '' }}" name="starts_at" value="" onchange="console.log" id="starts_at">
 
-
-                                        {{--                                        <input--}}
-{{--                                            id="countdown_end_date"--}}
-{{--                                            type="text"--}}
-{{--                                            class="form-control {{ $errors->has('starts_at') ? ' is-invalid' : '' }}"--}}
-{{--                                            value=""--}}
-{{--                                            autocomplete="off"--}}
-{{--                                        />--}}
-{{--                                        <input--}}
-{{--                                            id="countdown_end_date_send"--}}
-{{--                                            type="text"--}}
-{{--                                            class="form-control"--}}
-{{--                                            name="starts_at"--}}
-{{--                                            value=""--}}
-{{--                                            autocomplete="off"--}}
-{{--                                            hidden--}}
-{{--                                        />--}}
                                          @if ($errors->has('starts_at'))
                                             <span class="invalid-feedback d-block" role="alert">
                                                 <strong>{{ $errors->first('starts_at') }}</strong>
@@ -87,8 +70,9 @@
                                 <div class="form-group row">
                                     <label for="name" class="col-sm-3 col-form-label ">{{ __('تاریخ پایان') }}</label>
                                     <div class="col-sm-4">
-                                        <input data-jdp placeholder="YYYY/mm/dd" class="form-control {{ $errors->has('ends_at') ? ' is-invalid' : '' }}" name="ends_at"  value="{{ old('ends_at') }}">
-                                        @if ($errors->has('ends_at'))
+                                        <input data-jdp placeholder="YYYY/mm/dd" class="form-control {{ $errors->has('ends_at') ? ' is-invalid' : '' }}" id="ends" value="{{ old('ends_at') }}" onchange="console.log">
+                                        <input data-jdp hidden  class="form-control {{ $errors->has('ends_at') ? ' is-invalid' : '' }}" name="ends_at" value="" onchange="console.log" id="ends_at">
+                                    @if ($errors->has('ends_at'))
                                             <span class="invalid-feedback d-block" role="alert">
                                                 <strong>{{ $errors->first('ends_at') }}</strong>
                                             </span>
@@ -109,11 +93,12 @@
             </div>
         </div>
     </section>
+
 </div>
 
 
 
-<script>
+<script type="text/javascript">
     jalaliDatepicker.startWatch({
         separatorChar: "/",
         minDate: "attr",
@@ -122,57 +107,28 @@
         showTodayBtn: true,
         showEmptyBtn: true
     });
-
-    document.getElementById("countdown_end_date").addEventListener("jdp:change", function (e) { console.log(e) });
+    document.getElementById("starts_at").addEventListener("jdp:change", function (e) { console.log(e) });
+    document.getElementById("ends_at").addEventListener("jdp:change", function (e) { console.log(e) });
 
 
 
     $(document).ready(function(){
         var myButton = $("#submit");
-        var myInput = $("#start");
+        var start = $("#start");
+        var end = $("#ends");
         myButton.click(function(){
-            var inputValue = myInput.val();
-            // var mm = moment(inputValue).locale('en').format('YYYY/MM/DD');
-            // alert(mm);
 
+            var inputStart = start.val();
+            var inputDateStart = moment.from(inputStart, 'fa', 'YYYY/M/D ').format('YYYY/M/D');
+            document.getElementById('starts_at').value = inputDateStart;
 
-            document.getElementById('countdown_end_date').value = inputValue;
+            var inputEnd = end.val();
+            var inputDateEnd = moment.from(inputEnd, 'fa', 'YYYY/M/D ').format('YYYY/M/D');
+            document.getElementById('ends_at').value = inputDateEnd;
 
         });
     });
 
 </script>
 
-
-
-{{--<script>--}}
-{{--    $(document).ready(function () {--}}
-{{--        const max_data = new Date();--}}
-{{--        max_data.setDate(max_data.getDate() + 30);--}}
-
-{{--        var persian_data = new persianDate();--}}
-{{--        document.getElementById("countdown_end_date").innerHTML =--}}
-{{--            persian_data.format("YYYY/MM/DD");--}}
-
-{{--        $("#countdown_end_date").pDatepicker({--}}
-{{--            responsive: true,--}}
-{{--            altField: "#countdown_end_date_send",--}}
-{{--            altFieldFormatter: function (unixDate) {--}}
-{{--                var persian_data = new persianDate(unixDate)--}}
-{{--                    .toLocale("en")--}}
-{{--                    .toCalendar("gregorian")--}}
-{{--                    .format("YYYY/MM/DD H:mm:ss");--}}
-{{--                return persian_data;--}}
-{{--            },--}}
-{{--            minDate: new Date(),--}}
-{{--            autoClose: false,--}}
-{{--            timePicker: {--}}
-{{--                enabled: true,--}}
-{{--                meridiem: {--}}
-{{--                    enabled: true,--}}
-{{--                },--}}
-{{--            },--}}
-{{--        });--}}
-{{--    });--}}
-{{--</script>--}}
 @endsection

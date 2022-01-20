@@ -34,10 +34,6 @@
 
         <script src="{{ asset('backend/js/persian-date.js') }}"></script>
         <script src="{{ asset('backend/js/persian-date.min.js') }}"></script>
-{{--    <link href="{{ asset('backend/css/pickr.min.css') }}" rel="stylesheet">--}}
-{{--    <link href="{{ asset('backend/css/daterangepicker.min.css') }}" rel="stylesheet">--}}
-{{--    <script src="{{ asset('backend/js/daterangepicker.min.js') }}"></script>--}}
-{{--    <script src="{{ asset('backend/js/picker.min.js') }}"></script>--}}
 
     <!-- Scripts -->
     <script src="{{ asset('backend/plugins/jquery/jquery.min.js') }}"></script>
