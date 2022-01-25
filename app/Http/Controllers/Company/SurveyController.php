@@ -27,6 +27,8 @@ class SurveyController extends Controller
             'visibility' => 0,
         ]);
 
+        flash(__('نظرسنجی با موفقیت اضافه شد.'), 'success');
+
         return redirect()->route('company.surveys.edit', $survey);
     }
 
@@ -52,6 +54,8 @@ class SurveyController extends Controller
         $validatedData['notify_new_responses'] = $request->has('notify_new_responses') ? 1 : 0;
 
         $survey->fill($validatedData)->save();
+
+        flash(__('نظرسنجی با موفقیت اضافه شد.'), 'success');
 
         return redirect()->back();
     }

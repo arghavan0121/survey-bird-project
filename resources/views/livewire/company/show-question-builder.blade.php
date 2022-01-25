@@ -60,11 +60,9 @@
                                             <span class="error" >{{ $message }}</span>
                                         @enderror
                                         @if ($activeQuestion->image)
-                                        <i>Uploaded Image:</i>
-                                            <div class="list-card-image"><img class="item-img-question mb-3" src="{{url('/storage/'.$activeQuestion->image) }}"></div>
+                                        <i>تصویر آپلود شده:</i>
+                                            <div class="list-card-image"><img class="item-img-question mb-3" src="{{url('/storage/'.$activeQuestion->image) }}" ></div>
                                         @endif
-
-
                                     </div>
 
                                     @if(in_array($activeQuestion->type, ['multiple-choices', 'dropdown', 'yes-no']))

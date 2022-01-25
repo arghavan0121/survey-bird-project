@@ -19,7 +19,7 @@
 											<div class="form-group row">
 												<label for="title" class="col-sm-3 text-sm-right col-form-label">{{ __('عنوان') }}</label>
 												<div class="col-sm-6">
-													<input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $survey->title) }}">
+													<input type="text" class="form-control @error('title') is-invalid @enderror" name="title" placeholder="{{ old('title', $survey->title) }}">
 													@error('title')
 														<span class="invalid-feedback" role="alert">
 															<strong>{{ $message }}</strong>
@@ -30,7 +30,7 @@
 											<div class="form-group row">
 												<label for="goodbye_text" class="col-sm-3 text-sm-right col-form-label">{{ __('متن تشکر') }}</label>
 												<div class="col-sm-6">
-													<textarea name="goodbye_text" rows="3" class="form-control @error('goodbye_text') is-invalid @enderror">{{ old('goodbye_text', $survey->goodbye_text) }}</textarea>
+													<textarea name="goodbye_text" rows="3" placeholder="{{old('goodbye_text', $survey->goodbye_text)}}" class="form-control @error('goodbye_text') is-invalid @enderror"></textarea>
 													@error('goodbye_text')
 														<span class="invalid-feedback" role="alert">
 															<strong>{{ $message }}</strong>
@@ -41,7 +41,7 @@
 											<div class="form-group row">
 												<label for="welcome_message" class="col-sm-3 text-sm-right col-form-label">{{ __('متن خوش آمدگویی') }}</label>
 												<div class="col-sm-6">
-													<textarea name="welcome_message" rows="3" class="form-control @error('welcome_message') is-invalid @enderror">{{ old('welcome_message', $survey->welcome_message) }}</textarea>
+													<textarea name="welcome_message" rows="3" placeholder="{{old('welcome_message', $survey->welcome_message)}}" class="form-control @error('welcome_message') is-invalid @enderror"></textarea>
 													@error('welcome_message')
 														<span class="invalid-feedback" role="alert">
 															<strong>{{ $message }}</strong>
@@ -52,7 +52,7 @@
 											<div class="form-group row">
 												<label for="redirect_url" class="col-sm-3 text-sm-right col-form-label">{{ __('تغییر مسیر') }}</label>
 												<div class="col-sm-6">
-													<input type="text" class="form-control @error('redirect_url') is-invalid @enderror" name="redirect_url" value="{{ old('redirect_url', $survey->redirect_url) }}">
+													<input type="text" class="form-control @error('redirect_url') is-invalid @enderror" name="redirect_url" placeholder="{{ old('redirect_url', $survey->redirect_url) }}">
 													<small class="form-text text-muted">{{ __('پس از تکمیل، تغییر مسیر دهید') }}</small>
 													@error('redirect_url')
 														<span class="invalid-feedback" role="alert">
@@ -64,7 +64,7 @@
 											<div class="form-group row">
 												<label for="password" class="col-sm-3 text-sm-right col-form-label">{{ __('رمز عبور') }}</label>
 												<div class="col-sm-6">
-													<input type="text" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password', $survey->password) }}">
+													<input type="text" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="{{ old('password', $survey->password) }}">
 													@error('password')
 														<span class="invalid-feedback" role="alert">
 															<strong>{{ $message }}</strong>

@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.rtl.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/intlTelInput.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/rangeslider.css') }}">
     <title>@yield('title')</title>
 </head>
-<body>
+<body dir="rtl">
     <main>
         @yield('content')
     </main>

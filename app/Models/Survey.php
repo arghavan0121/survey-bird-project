@@ -31,6 +31,7 @@ class Survey extends Model
         'button_color',
         'button_text_color',
         'background_color',
+        'background_image',
         'notify_new_responses'
     ];
 
@@ -40,6 +41,7 @@ class Survey extends Model
         'button_color' => 'rgb(23, 162, 184)',
         'button_text_color' => 'rgb(255, 255, 255)',
         'background_color' => '#FBFBFB',
+        'background_image' => '',
     ];
 
     public static function boot()

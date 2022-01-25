@@ -7,7 +7,7 @@ trait QuestionBuilder
     public $types = [
         [
             'key' => 'multiple-choices',
-            'title' => 'Multiple Choices',
+            'title' => 'چند انتخابی',
             'attributes' => [
                 'choice_selection_count' => 1,
                 'randomize_choice' => 0,
@@ -20,17 +20,17 @@ trait QuestionBuilder
 
         [
             'key' => 'phone',
-            'title' => 'Phone',
+            'title' => 'تلفن',
         ],
 
         [
             'key' => 'email',
-            'title' => 'Email',
+            'title' => 'ایمیل',
         ],
 
         [
             'key' => 'short-text',
-            'title' => 'Short Text',
+            'title' => 'متن کوتاه',
             'attributes' => [
                 'max_chars' => 50,
             ],
@@ -38,7 +38,7 @@ trait QuestionBuilder
 
         [
             'key' => 'long-text',
-            'title' => 'Long Text',
+            'title' => 'متن بلند',
             'attributes' => [
                 'max_chars' => 200,
             ],
@@ -46,18 +46,18 @@ trait QuestionBuilder
 
         [
             'key' => 'yes-no',
-            'title' => 'Yes or No',
+            'title' => 'بله / خیر',
             'attributes' => [
                 'choices' => [
-                    1 => 'Yes',
-                    2 => 'No',
+                    1 => 'بله',
+                    2 => 'خیر',
                 ],
             ],
         ],
 
         [
             'key' => 'rating',
-            'title' => 'Rating',
+            'title' => 'رتبه بندی',
             'attributes' => [
                 'choices' => [
                     1,
@@ -71,7 +71,7 @@ trait QuestionBuilder
 
         [
             'key' => 'date',
-            'title' => 'Date',
+            'title' => 'تاریخ',
             'attributes' => [
                 'date_format' => 'MMDDYYYY',
             ],
@@ -79,12 +79,12 @@ trait QuestionBuilder
 
         [
             'key' => 'number',
-            'title' => 'Number',
+            'title' => 'عدد',
         ],
 
         [
             'key' => 'dropdown',
-            'title' => 'Dropdown',
+            'title' => 'منو کشویی',
             'attributes' => [
                 'alphabetical_order' => false,
                 'randomize' => false,
@@ -93,7 +93,7 @@ trait QuestionBuilder
         ],
         [
             'key' => 'slider',
-            'title' => 'Slider',
+            'title' => 'نوار لغزنده',
             'attributes' => [
                 'choice_selection_count' => 1,
                 'randomize_choice' => 0,

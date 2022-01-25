@@ -16,7 +16,7 @@
 <body>
     <nav id="sidebar">
         <div class="sidebar-header text-right">
-            <h5 class="mb-0">پرنده نظرسنجی</h5>
+            <h5 class="mb-0">پرسمان</h5>
         </div>
 
         <ul class="list-unstyled components text-right">

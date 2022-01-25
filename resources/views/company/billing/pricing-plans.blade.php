@@ -25,7 +25,7 @@
                                 </ul>
 
                                 @if ($subscription && $subscription->active() && $plan->id == $subscription->plan_id)
-                                    <button class="btn btn-block btn-info text-uppercase" disabled>Current Plan</button>
+                                    <button class="btn btn-block btn-info text-uppercase" disabled>نقشه جاری</button>
                                 @else
                                     <form action="{{ route('company.payment.show') }}" method="GET">
                                         <input type="hidden" name="plan_id" value="{{ $plan->id }}">

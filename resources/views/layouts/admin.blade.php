@@ -20,7 +20,6 @@
     <link href="{{ asset('backend/plugins/toastr/toastr.min.css') }}" rel="stylesheet">
     <link href="{{ asset('backend/css/custom.css') }}" rel="stylesheet">
 
-
     <script src="{{ asset('backend/js/datepicker.js') }}"></script>
 
 
