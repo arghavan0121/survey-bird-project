@@ -36,8 +36,15 @@
             <p><a class="nav-link px-3" href="#">سوالات متداول</a></p>
         </div>
         <div class="d-flex px-3 w-250">
-            <a href="{{ route('login') }}" class="btn btn-primary btn-sm ml-3">ورود</a>
-            <a href="{{ route('register') }}" class="btn btn-outline-primary btn-sm">ثبت نام</a>
+
+            @auth
+                <a href="{{ route('login') }}" class="btn btn-primary btn-sm ml-3">ورود به پنل کاربری</a>
+            @endauth
+            @guest
+                <a href="{{ route('login') }}" class="btn btn-primary btn-sm ml-3">ورود</a>
+                <a href="{{ route('register') }}" class="btn btn-outline-primary btn-sm">ثبت نام</a>
+            @endguest
+
         </div>
     </nav>
     <!--Navbar-->
@@ -67,8 +74,15 @@
                     </li>
                 </ul>
                 <div>
-                    <a href="{{ route('login') }}" class="btn btn-primary">ورود</a>
-                    <a href="{{ route('register') }}" class="btn btn-outline-primary ml-2">ثبت نام</a>
+
+                    @auth
+                        <a href="{{ route('login') }}" class="btn btn-primary">ورود به پنل کاربری</a>
+                    @endauth
+                    @guest
+                        <a href="{{ route('login') }}" class="btn btn-primary">ورود</a>
+                        <a href="{{ route('register') }}" class="btn btn-outline-primary ml-2">ثبت نام</a>
+                    @endguest
+
                 </div>
             </div>
         </div>
@@ -78,8 +92,8 @@
         <div class="container pb-2 pt-md-5">
             <div class="row py-5 justify-content-between align-items-center">
                 <div class="col-lg-6 col-md-7 py-5 text-right">
-                    <h1 class="font-weight-bold display-5 mb-4">ساختن نظرسنجی آنلاین هیچوقت از این آسان تر نبوده.</h1>
-                    <p class="lead mb-5">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                    <h2 class="font-weight-bold display-5 mb-4">ساختن نظرسنجی آنلاین هیچوقت از این آسان تر نبوده.</h2>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
                     <a href="{{ route('register') }}" class="btn btn-primary btn-size">همین حالا شروع کنید</a></div>
                 </div>
             </div>
@@ -191,7 +205,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="info">
-                        <h3>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم <br>از صنعت چاپ و با استفاده از طراحان گرافیک است.</h3>
+                        <h4>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم <br>از صنعت چاپ و با استفاده از طراحان گرافیک است.</h4>
                         <a class="btn btn-secondary mt-3" href="{{ route('register') }}">ایجاد حساب کاربری</a>
                     </div>
                 </div>
@@ -266,6 +280,11 @@
         </div>
     </footer>
 
+    <!---start GOFTINO code--->
+    <script type="text/javascript">
+        !function(){var i="q74qPt",a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/"+i,l=localStorage.getItem("goftino_"+i);g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();
+    </script>
+    <!---end GOFTINO code--->
     <script src="{{ asset('landing/js/jquery-3.6.0.slim.min.js') }}"></script>
     <script src="{{ asset('landing/js/popper.min.js') }}"></script>
     <script src="{{ asset('landing/js/bootstrap.min.js') }}"></script>

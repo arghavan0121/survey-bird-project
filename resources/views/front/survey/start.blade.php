@@ -10,7 +10,8 @@
                     answerColor : '{{ $survey->answer_color}}',
                     buttonColor : '{{ $survey->button_color }}',
                     buttonTextColor : '{{ $survey->button_text_color }}',
-                    backgroundColor: '{{ $survey->background_color }}'
+                    backgroundColor: '{{ $survey->background_color }}',
+{{--                    backgroundImage: '{{ $survey->background_Image }}'--}}
                 }" x-init="document.body.style.backgroundColor = backgroundColor;">
                     <div class="border-0 border-light py-5 px-md-4">
                         <div class=" mb-5 text-primary">

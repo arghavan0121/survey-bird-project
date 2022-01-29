@@ -1,11 +1,20 @@
+@font-face {
+    font-family: IranYekan;
+    src: url("../../backend/fonts/iranyekan.ttf");
+    src: url("../../backend/fonts/iranyekan.eot");
+    src: url("../../backend/fonts/iranyekan.woff");
+    font-weight: 500;
+    font-style: normal;
+}
+body {
+    font-family: IranYekan !important;
+    text-align:right;
+}
 ul {
   padding-right: 0;
   list-style-type: none;
 }
 
-body{
- text-align:right;
-}
 
 .nav-link .fa-user-circle {
   font-size: 25px;

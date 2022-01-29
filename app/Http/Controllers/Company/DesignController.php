@@ -21,25 +21,25 @@ class DesignController extends Controller
             'button_color' => ['required'],
             'button_text_color' => ['required'],
             'background_color' => ['required'],
-            'background_image' => ['nullable'],
+//            'background_image' => ['nullable'],
             ]);
 
 
-        $image = '';
-        if ($request->hasFile('background_image')) {
-
-            $destination = storage_path(). config('cms-setting.url_subscription');
-            if (!is_dir($destination)) {
-                mkdir($destination, 0777, true);
-            }
-            $destination = $destination . '/';
-            $file = $request->file('background_image');
-            $filename = time() . $file->getClientOriginalName();
-            $file->move($destination, $filename);
-            $image = 'bg_image/' . $filename;
-        } else {
-            $image = null;
-        }
+//        $image = '';
+//        if ($request->hasFile('background_image')) {
+//
+//            $destination = storage_path(). config('cms-setting.url_subscription');
+//            if (!is_dir($destination)) {
+//                mkdir($destination, 0777, true);
+//            }
+//            $destination = $destination . '/';
+//            $file = $request->file('background_image');
+//            $filename = time() . $file->getClientOriginalName();
+//            $file->move($destination, $filename);
+//            $image = 'bg_image/' . $filename;
+//        } else {
+//            $image = null;
+//        }
 
         $survey->update([
             'question_color' => $request->get('question_color'),
@@ -47,7 +47,7 @@ class DesignController extends Controller
             'button_color' => $request->get('button_color'),
             'button_text_color' => $request->get('button_text_color'),
             'background_color' => $request->get('background_color'),
-            'background_image' => $image ?? $survey->background_image,
+//            'background_image' => $image ?? $survey->background_image,
 
         ]);
 

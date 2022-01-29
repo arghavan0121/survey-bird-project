@@ -27,7 +27,7 @@ class SurveyController extends Controller
             'visibility' => 0,
         ]);
 
-        flash(__('نظرسنجی با موفقیت اضافه شد.'), 'success');
+//        flash(__('نظرسنجی با موفقیت اضافه شد.'), 'success');
 
         return redirect()->route('company.surveys.edit', $survey);
     }

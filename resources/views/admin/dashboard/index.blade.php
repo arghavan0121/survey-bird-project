@@ -53,7 +53,6 @@
                 <div class="card card-outline card-success">
                     <div class="card-header">
                         <h3 class="card-title">{{ __('تعداد کاربران در روز') }}</h3>
-
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="">
                             </button>

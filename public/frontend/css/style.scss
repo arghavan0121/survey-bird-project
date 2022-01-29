@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
 
+
 // variables
 $black: #393e46;
 $off-white: #f8f8f8;
@@ -8,7 +9,7 @@ $blue-1: #00adb5;
 $blue-2: #aad8d3;
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: IranYekan !important;
     color: $black;
     background-color: $off-white;
     overflow-x: hidden;

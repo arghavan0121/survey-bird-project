@@ -37,7 +37,7 @@
                                             <tr>
                                                 <td>{{ $language->name }}</td>
                                                 <td>{{ $language->code }}</td>
-                                                <td>{{ ($language->status == 1) ? 'Enabled':'Disabled' }}</td>
+                                                <td>{{ ($language->status == 1) ? 'فعال':'غیرفعال' }}</td>
                                                 <td><a class="fas fa-edit" href="{{ route('admin.language.edit', $language) }}"></a></td>
                                             </tr>
                                         @endforeach

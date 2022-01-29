@@ -26,6 +26,9 @@
                             @csrf
 
                             <table class="table table-bordered">
+{{--                                @php--}}
+{{--                                    dd(settings()->get('stripesubscription_status'));--}}
+{{--                                @endphp--}}
                                 <tbody>
                                     @if(settings()->get('stripesubscription_status'))
                                         <tr>
@@ -75,7 +78,7 @@
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">{{ __('Plan Summary') }}</h3>
+                        <h3 class="card-title">{{ __('خلاصه طرح') }}</h3>
                     </div>
                     <div class="card-body p-0">
                         <table class="table">

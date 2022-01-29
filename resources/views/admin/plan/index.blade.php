@@ -39,7 +39,14 @@
                                                 <td>{{ $plan->title }}</td>
                                                 <td>{{ $plan->code }}</td>
                                                 <td>{{ $plan->price }}</td>
-                                                <td>{{ ucfirst($plan->interval) }}</td>
+
+                                                @if($plan->interval == 'monthly')
+                                                    @php $interval = 'ماهانه' @endphp
+                                                @elseif($plan->interval == 'yearly')
+                                                    @php $interval = 'سالانه' @endphp
+                                                @endif
+
+                                                <td>{{ $interval }}</td>
                                                  <td><a class="fas fa-edit" href="{{ route('admin.plans.edit', $plan) }}"></a></td>
                                             </tr>
                                         @endforeach

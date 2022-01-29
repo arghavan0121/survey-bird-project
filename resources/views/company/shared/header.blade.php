@@ -14,7 +14,7 @@
 					<a href="/" class="nav-link">{{ __('خانه') }}</a>
 				</li>
 				<li class="nav-item">
-					<a href="{{ route('company.surveys.index') }}" class="nav-link">{{ __('نظر سنجی های من') }}</a>
+					<a href="{{ route('company.surveys.index') }}" class="nav-link">{{ __('نظرسنجی های من') }}</a>
 				</li>
 				<li class="nav-item">
 					<a href="{{ route('company.surveys.templates.index') }}" class="nav-link">{{ __('گالری') }}</a>

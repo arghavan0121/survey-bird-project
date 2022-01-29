@@ -26,7 +26,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="code" class="col-sm-3 col-form-label ">{{ __('نوضیحات') }}</label>
+                                    <label for="code" class="col-sm-3 col-form-label ">{{ __('توضیحات') }}</label>
                                     <div class="col-sm-5">
                                         <textarea class="form-control @error('description') is-invalid @enderror" rows="3" name="description">{{ old('description') }}</textarea>
                                         @error('description')

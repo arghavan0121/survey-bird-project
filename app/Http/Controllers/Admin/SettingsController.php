@@ -85,6 +85,8 @@ class SettingsController extends Controller
 
         DotenvEditor::save();
 
+        flash(__('تغییرات با موفقیت به روز شد.'), 'success');
+
         return redirect()->back();
     }
 

@@ -9,8 +9,10 @@
                 <div class="welcome" x-data="{
                     buttonColor : '{{ $survey->button_color }}',
                     buttonTextColor : '{{ $survey->button_text_color }}',
-                    backgroundColor: '{{ $survey->background_color }}'
+                    backgroundColor: '{{ $survey->background_color }}',
+{{--                    backgroundImage: '{{ $survey->background_image }}'--}}
                 }" x-init="document.body.style.backgroundColor = backgroundColor;">
+
                     <h5 class="text-center">{{ __('برای شرکت در نظرسنجی رمز عبور را وارد کنید') }}</h5>
                     <form method="POST" action="{{ route('front.survey.password.submit', ['survey' => $survey]) }}">
                         @csrf

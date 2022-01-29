@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@font-face {
+    font-family: IranYekan;
+    src: url("../fonts/iranyekan.ttf");
+    src: url("../fonts/iranyekan.eot");
+    src: url("../fonts/iranyekan.woff");
 
+    font-weight: normal;
+    font-style: normal;
+}
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: IranYekan !important;
 }
 
 .btn-primary {
@@ -332,7 +340,6 @@ a:hover {
 
 .feature-sec-1 p {
   line-height: 28px;
-  letter-spacing: 1px;
 }
 
 .feature-sec-1 .btn-home {
@@ -879,3 +886,4 @@ a:hover {
     #sidebar {display: none !important;}
 }
 /*Custom css code - end*/
+

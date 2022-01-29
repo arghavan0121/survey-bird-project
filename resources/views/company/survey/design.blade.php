@@ -71,26 +71,26 @@
                                                     </div>
 												</div>
 											</div>
-                                            <div class="form-group row">
-												<label for="background_color" class="col-sm-3 text-sm-right col-form-label">{{ __('تصویر پس زمینه') }}</label>
-												<div class="col-sm-3">
-                                                    <div class="input-group">
-                                                        <input type="file" class="form-control mb-3 ims" name="background_image" src="{{asset(old('image',$survey->background_image))}}">
-                                                        @error('background_image')
-                                                        <span class="error" >{{ $message }}</span>
-                                                        @enderror
+{{--                                            <div class="form-group row">--}}
+{{--												<label for="background_color" class="col-sm-3 text-sm-right col-form-label">{{ __('تصویر پس زمینه') }}</label>--}}
+{{--												<div class="col-sm-3">--}}
+{{--                                                    <div class="input-group">--}}
+{{--                                                        <input type="file" class="form-control mb-3 ims" name="background_image" src="{{asset(old('image',$survey->background_image))}}">--}}
+{{--                                                        @error('background_image')--}}
+{{--                                                        <span class="error" >{{ $message }}</span>--}}
+{{--                                                        @enderror--}}
 
-                                                    </div>
-                                                    @if ($survey->background_image)
-                                                        <br><i>تصویر آپلود شده:</i>
-                                                        <div class="list-card-image">
-                                                            <img class="item-img-question mb-3" src="{{url('/storage/'.$survey->background_image)}}" >
+{{--                                                    </div>--}}
+{{--                                                    @if ($survey->background_image)--}}
+{{--                                                        <br><i>تصویر آپلود شده:</i>--}}
+{{--                                                        <div class="list-card-image">--}}
+{{--                                                            <img class="item-img-question mb-3" src="{{url('/storage/'.$survey->background_image)}}" >--}}
 
-                                                        </div>
-                                                    @endif
+{{--                                                        </div>--}}
+{{--                                                    @endif--}}
 
-												</div>
-											</div>
+{{--												</div>--}}
+{{--											</div>--}}
 											<div class="form-group row">
 												<label class="col-sm-3 text-sm-right col-form-label"></label>
 												<div class="col-sm-6">

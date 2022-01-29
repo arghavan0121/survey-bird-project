@@ -1,8 +1,17 @@
+@font-face {
+    font-family: IranYekan;
+    src: url("../fonts/iranyekan.ttf");
+    src: url("../fonts/iranyekan.eot");
+    src: url("../fonts/iranyekan.woff");
+
+    font-weight: 500;
+    font-style: normal;
+}
 body {
-    font-family: IRANSans !important;
+    font-family: IranYekan !important;
 }
 .sweet-alert {
-    font-family: IRANSans !important;
+    font-family: IranYekan !important;
 }
 .empty-state-container {
     text-align: center;

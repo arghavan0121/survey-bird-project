@@ -11,6 +11,6 @@ class ExportController extends Controller
 {
     public function export(Survey $survey)
     {
-        return Excel::download(new SurveyResponseExport($survey), $survey->title.'.csv');
+        return Excel::download(new SurveyResponseExport($survey), $survey->title.'.xls');
     }
 }

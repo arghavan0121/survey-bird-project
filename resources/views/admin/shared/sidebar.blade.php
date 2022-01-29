@@ -43,12 +43,6 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.extensions.index') }}" class="nav-link {{ (request()->is('admin/extensions*')) ? 'active' : '' }}">
-                        <i class="fas fa-th nav-icon"></i>
-                        <p>{{ __('برنامه های افزودنی') }} <span class="left badge badge-warning">New</span></p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="{{ route('admin.settings.index') }}" class="nav-link {{ (request()->is('admin/settings')) ? 'active' : '' }}">
                         <i class="fas fa-cogs nav-icon"></i>
                         <p>{{ __('تنظیمات') }}</p>
