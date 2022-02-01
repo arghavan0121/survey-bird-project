@@ -13,8 +13,13 @@
                     <div class="col-lg-4">
                         <div class="card mb-5 mb-lg-0">
                             <div class="card-body">
+                                @if($plan->interval == 'monthly')
+                                    @php $interval = 'ماهانه' @endphp
+                                @elseif($plan->interval == 'yearly')
+                                    @php $interval = 'سالانه' @endphp
+                                @endif
                                 <h5 class="card-title text-muted text-uppercase text-center">{{ $plan->title }}</h5>
-                                <h6 class="card-price text-center">{{ $plan->price }}<span class="period">/{{ $plan->interval }}</span></h6>
+                                <h6 class="card-price text-center">{{ $plan->price }}<span class="period">/{{ $interval }}</span></h6>
 
                                 <hr>
 

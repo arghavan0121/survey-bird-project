@@ -39,7 +39,7 @@
         var barChart2 = {
             labels: surveyChart.labels,
             datasets: [{
-                label: 'Surveys',
+                label: 'نظرسنجی ها',
                 backgroundColor: 'rgba(60,141,188,0.9)',
                 borderColor: 'rgba(60,141,188,0.8)',
                 pointRadius: false,
@@ -71,7 +71,7 @@
         var barChart3 = {
             labels: responseChart.labels,
             datasets: [{
-                label: 'Responses',
+                label: 'پاسخ ها',
                 backgroundColor: 'rgba(60,141,188,0.9)',
                 borderColor: 'rgba(60,141,188,0.8)',
                 pointRadius: false,

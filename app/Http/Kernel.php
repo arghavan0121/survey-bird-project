@@ -67,6 +67,7 @@ class Kernel extends HttpKernel
         'can.install' => \App\Http\Middleware\CanInstall::class,
         'setlocale' => \App\Http\Middleware\SetLocale::class,
         'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
-        'samesitenull' => \App\Http\Middleware\SameSiteNull::class
+        'samesitenull' => \App\Http\Middleware\SameSiteNull::class,
+        'isAdmin' => \App\Http\Middleware\IsAdmin::class,
     ];
 }

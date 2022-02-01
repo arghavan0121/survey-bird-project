@@ -15,7 +15,6 @@ class SurveyController extends Controller
             $survey->created_at = new Verta($survey->created_at) ;
         }
 
-
         return view('admin.survey.index', compact('surveys'));
     }
 

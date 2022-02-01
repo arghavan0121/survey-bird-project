@@ -18,7 +18,12 @@
                     </tr>
                     <tr>
                         <td class="text-muted">{{ __('هزینه') }}</td>
-                        <td>{{ $subscription->plan->price }} / {{ $subscription->plan->interval }}</td>
+                        @if($subscription->plan->interval == 'monthly')
+                            @php $interval = 'ماهانه' @endphp
+                        @elseif($subscription->plan->interval == 'yearly')
+                            @php $interval = 'سالانه' @endphp
+                        @endif
+                        <td>{{ $subscription->plan->price }} / {{ $interval }}</td>
                     </tr>
 
                     @if ($subscription->payment_method)

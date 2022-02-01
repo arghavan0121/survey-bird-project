@@ -50,6 +50,7 @@ class ShowQuestionBuilder extends Component
         if (! $this->questions->isEmpty()) {
             $this->showQuestion($this->questions->first());
         }
+
     }
 
     public function render()
@@ -66,6 +67,7 @@ class ShowQuestionBuilder extends Component
 
     public function submit()
     {
+
         $this->reassignChoices();
 
         if($this->image) {
@@ -79,11 +81,14 @@ class ShowQuestionBuilder extends Component
             $this->activeQuestion->image = $filename;
         }
 
+
         $this->activeQuestion->save();
 
         $this->reset('image');
 
         $this->showQuestion($this->activeQuestion);
+
+        session()->flash('message', 'سوال شما با موفقیت ایجاد شد.');
     }
 
     public function deleteQuestion(Question $question)
@@ -109,6 +114,7 @@ class ShowQuestionBuilder extends Component
 
     public function addQuestion($surveyUuid, $questionType)
     {
+
         try {
             $survey = Survey::where('uuid', $surveyUuid)->first();
 
@@ -121,6 +127,7 @@ class ShowQuestionBuilder extends Component
             $this->dispatchBrowserEvent('alert',
                 ['type' => 'warning',  'message' => $e->getMessage()]);
         }
+
     }
 
     private function reassignChoices()
@@ -130,6 +137,7 @@ class ShowQuestionBuilder extends Component
         $attributes['choices'] = $this->choices;
 
         $this->activeQuestion->attributes = $attributes;
+
     }
 
     public function uploadImage()

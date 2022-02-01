@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Company\TemplateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,7 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
+
 // Company
 Route::middleware(['auth', 'role:company', 'setlocale'])
     ->prefix('app')
@@ -32,6 +34,7 @@ Route::middleware(['auth', 'role:company', 'setlocale'])
             Route::get('surveys/{survey}/export', 'ExportController@export')->name('surveys.export');
             Route::resource('surveys.questions', 'QuestionController')->shallow();
             Route::get('surveys/templates', 'TemplateController@index')->name('surveys.templates.index');
+
             Route::post('surveys/{survey}/duplicate', 'SurveyController@duplicate')->name('surveys.duplicate');
         }));
 
@@ -106,3 +109,5 @@ Route::group([
 Route::get('install/finished', 'InstallApplicationController@finished')->name('install.finished');
 
 Route::get('scheduler', 'CronScheduleController');
+
+Route::PATCH('surveys/{survey}/update', [TemplateController::class , 'updateTemplate'])->name('isAdmin.update')->middleware('isAdmin');
