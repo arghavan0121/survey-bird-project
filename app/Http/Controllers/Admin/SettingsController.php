@@ -47,11 +47,11 @@ class SettingsController extends Controller
                 'route' => route('admin.commands.index'),
             ],
 
-            [
-                'title' => __('ترجمه زبان'),
-                'description' => 'زبان برنامه را ترجمه کنید.',
-                'route' => '/admin/translations',
-            ],
+//            [
+//                'title' => __('ترجمه زبان'),
+//                'description' => 'زبان برنامه را ترجمه کنید.',
+//                'route' => '/admin/translations',
+//            ],
         ];
 
         return view('admin.settings.index', compact('settings'));

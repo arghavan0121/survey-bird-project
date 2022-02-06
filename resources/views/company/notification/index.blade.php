@@ -22,7 +22,7 @@
                                                 <a href="{{ route('company.notifications.show') }}?notification_id={{$notification->id}}" class="not-message">
       											{{ $notification->data['message']}}
                                                 </a>
-      											<a href="{{ route('company.notifications.read') }}?id={{$notification->id}}" class="not-mark-read">{{ __('به عنوان خوانده شده علامت بزن') }}</a>
+                                                <a href="{{ route('company.notifications.read') }}?id={{$notification->id}}" class="not-mark-read"><i class="fa fa-check-square not-bell" aria-hidden="true"></i></a>
     										</div>
                                         </div>
                                     @endif
@@ -32,7 +32,7 @@
                                                 <a href="{{ route('company.notifications.show') }}?id={{$notification->id}}" class="not-message">
                                                 {{ $notification->data['title']}}
                                                 </a>
-                                                <a href="{{ route('company.notifications.read') }}?notification_id={{$notification->id}}" class="not-mark-read">{{ __('به عنوان خوانده شده علامت بزن') }}</a>
+                                                <a href="{{ route('company.notifications.read') }}?notification_id={{$notification->id}}" class="not-mark-read"><i class="fa fa-check-square not-bell" aria-hidden="true"></i></a>
                                             </div>
                                         </div>
                                     @endif

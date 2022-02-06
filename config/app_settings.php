@@ -43,7 +43,7 @@ return [
                 'title' => 'ایمیل',
                 'inputs' => [
                     [
-                        'label' => 'راننده',
+                        'label' => 'میزبان هاست',
                         'key' => 'MAIL_DRIVER',
                         'storage' => 'env',
                         'type' => 'text',

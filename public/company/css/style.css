@@ -9,6 +9,7 @@
 body {
     font-family: IranYekan !important;
     text-align:right;
+    width: 100%;
 }
 ul {
   padding-right: 0;
@@ -449,4 +450,60 @@ textarea { resize: none; }
 .not-bell{
   float: left !important;
 }
+
+@media (max-width: 991px ) and (min-width: 768px){
+    .card-title {
+        font-size: 1rem;
+    }
+    body{
+        font-size: 0.85rem;
+    }
+    .btn{
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 767px ) and (min-width: 576px){
+    .card-title {
+        font-size: 0.85rem;
+    }
+    body{
+        font-size: 0.75rem;
+    }
+    .btn{
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 400px ){
+    body{
+        font-size: 0.85rem;
+    }
+}
+@media (max-width: 450px ){
+    h2{
+        font-size: 1.5rem;
+    }
+    .pricing .card-price{
+        font-size: 1.75rem;
+    }
+}
+@media (max-width: 767px ) and (min-width: 450px ) {
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .pricing .card-price {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media (max-width: 991px ) and (min-width: 768px){
+    .card_plan{
+        width: 80%;
+        margin: 0 10% 0 10%;
+    }
+}
+
 

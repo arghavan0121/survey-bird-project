@@ -11,7 +11,7 @@
             <div class="row">
                 @foreach ($plans as $plan)
                     <div class="col-lg-4">
-                        <div class="card mb-5 mb-lg-0">
+                        <div class="card card_plan mb-5 mb-lg-0">
                             <div class="card-body">
                                 @if($plan->interval == 'monthly')
                                     @php $interval = 'ماهانه' @endphp

@@ -11,7 +11,7 @@
     </div>
     <div class="card">
         <div class="card-body register-card-body">
-            <h4 class="login-box-msg">{{ __('برای شروع وارد شوید') }}</h4>
+            <h5 class="login-box-msg">{{ __('برای شروع وارد شوید') }}</h5>
             <form method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="input-group mb-3">

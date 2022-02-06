@@ -179,9 +179,14 @@
                                     <span>{{ $loop->index + 1}}</span>
                                 </div>
                                 <div class="price-wrapper">
-                                    <span class="currency">$</span>
+{{--                                    <span class="currency">$</span>--}}
                                     <span class="price">{{ $plan->price }}</span>
-                                    <span class="period">/{{ ucfirst($plan->interval) }}</span>
+                                    @if($plan->interval == 'monthly')
+                                        @php $interval = 'ماهانه' @endphp
+                                    @elseif($plan->interval == 'yearly')
+                                        @php $interval = 'سالانه' @endphp
+                                    @endif
+                                    <span class="period">/{{ $interval }}</span>
                                 </div>
                                 <ul class="list">
                                     @foreach (explode("\n", str_replace("\r", "", $plan->description)) as $feature)

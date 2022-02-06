@@ -78,10 +78,23 @@ a:hover {
   color: #635cdb !important;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 991px) {
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
+}
+
+@media (max-width: 500px) {
+    h2 {
+        font-size: 1.30rem;
+    }
+
+    h4{
+        font-size: 1.20rem;
+    }
+    body{
+        font-size: 0.95rem;
+    }
 }
 
 .navbar {
@@ -474,6 +487,24 @@ a:hover {
 
 .pricing-item .pricing-footer .btn {
   width: 150px;
+}
+@media (max-width: 991px ) and (min-width: 768px ) {
+    .pricing-item {
+        width: 70%;
+        margin: 0 15% 0 15%;
+    }
+}
+@media (max-width: 767px ) and (min-width: 576px ) {
+    .pricing-item {
+        width: 85%;
+        margin: 0 10% 0 10%;
+    }
+}
+@media (max-width: 575px ) and (min-width: 440px ) {
+    .pricing-item {
+        width: 90%;
+        margin: 0 6% 0 4%;
+    }
 }
 
 .brands {

@@ -23,7 +23,7 @@
                             @include('admin.shared.empty', ['lists' => $users])
 
                             @if(!$users->isEmpty())
-                            <table class="table table-hover-table-responsive">
+                            <table class="table table-hover-table-responsive ">
                                 <thead>
                                     <tr>
                                         <th width="25%">{{ __('نام') }}</th>

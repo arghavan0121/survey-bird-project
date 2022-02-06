@@ -26,7 +26,7 @@
                             @include('admin.shared.empty', ['lists' => $surveys])
 
                             @if(!$surveys->isEmpty())
-                                <table class="table table-hover-table-responsive">
+                                <table class="table table-hover-table-responsive table-responsive">
                                     <thead>
                                         <tr>
                                             <th width="15%">{{ __('نام کاربر') }}</th>

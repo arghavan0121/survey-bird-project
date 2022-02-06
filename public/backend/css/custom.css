@@ -47,4 +47,31 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+    h6{
+        font-size: 0.80rem !important;
+    }
+    .btn{
+        font-size: 0.80rem;
+        margin-top: 5%;
+    }
+}
+@media (max-width: 944px)and (min-width: 601px){
+    h6{
+        font-size: 0.90rem !important;
+    }
+    .btn{
+        font-size: 0.90rem;
+        margin-top: 5%;
+    }
+
+}
+
+@media (max-width: 507px)and (min-width: 300px){
+    table{
+        font-size: 0.90rem;
+    }
+}
+
+
 
