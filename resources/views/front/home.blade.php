@@ -91,7 +91,7 @@
     <div class="banner-bg pb-3 pt-md-5">
         <div class="container pb-2 pt-md-5">
             <div class="row py-5 justify-content-between align-items-center">
-                <div class="col-lg-6 col-md-7 py-5 text-right">
+                <div class="col-lg-6 col-md-10 py-5 text-right h2_center">
                     <h2 class="font-weight-bold display-5 mb-4">ساختن نظرسنجی آنلاین هیچوقت از این آسان تر نبوده.</h2>
                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
                     <a href="{{ route('register') }}" class="btn btn-primary btn-size">همین حالا شروع کنید</a></div>

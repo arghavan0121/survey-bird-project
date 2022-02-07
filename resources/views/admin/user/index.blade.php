@@ -19,11 +19,11 @@
                         <div class="card-header text-right">
                             <h3 class="card-title">{{ __('کاربران') }}</h3>
                         </div>
-                        <div class="card-body p-0">
+                        <div class="card-body p-0 table-responsive">
                             @include('admin.shared.empty', ['lists' => $users])
 
                             @if(!$users->isEmpty())
-                            <table class="table table-hover-table-responsive ">
+                            <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th width="25%">{{ __('نام') }}</th>

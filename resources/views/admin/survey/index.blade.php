@@ -22,11 +22,11 @@
                         <div class="card-header">
                             <h3 class="card-title">{{ __('نظرسنجی ها') }}</h3>
                         </div>
-                        <div class="card-body p-0">
+                        <div class="card-body p-0 table-responsive">
                             @include('admin.shared.empty', ['lists' => $surveys])
 
                             @if(!$surveys->isEmpty())
-                                <table class="table table-hover-table-responsive table-responsive">
+                                <table class="table table-hover">
                                     <thead>
                                         <tr>
                                             <th width="15%">{{ __('نام کاربر') }}</th>

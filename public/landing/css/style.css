@@ -913,8 +913,17 @@ a:hover {
 /*# sourceMappingURL=style.css.map */
 
 /*Custom css code - start*/
-@media (min-width: 720px) and (max-width: 1920px) {
-    #sidebar {display: none !important;}
+@media (min-width: 992px) and (max-width: 1920px) {
+    #sidebar {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .h2_center{
+        /*background-color: #0c5460;*/
+        margin:auto;
+    }
 }
 /*Custom css code - end*/
 

@@ -31,11 +31,11 @@
                         <div class="card-header">
                             <h3 class="card-title">{{ __('اشتراک ها') }}</h3>
                         </div>
-                        <div class="card-body" style="padding: 0px 0px;">
+                        <div class="card-body table-responsive" style="padding: 0px 0px;">
                             @include('admin.shared.empty', ['lists' => $subscriptions])
 
                             @if(!$subscriptions->isEmpty())
-                            <table class="table table-hover-table-responsive">
+                            <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th width="15%">{{__('نام')}}</th>
