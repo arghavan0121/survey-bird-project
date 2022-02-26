@@ -21,7 +21,7 @@
 
         <ul class="list-unstyled components text-right">
             <li class="nav-item">
-                <a class="nav-link px-3" href="#">صفحه اصلی</a>
+                <a class="nav-link px-3" href="/porseman">صفحه اصلی</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link px-3" href="#service">امکانات</a>
@@ -31,9 +31,9 @@
             </li>
         </ul>
         <div class="px-3 pb-3 w-250 text-right">
-            <p><a class="nav-link px-3" href="#">شرایط و ضوابط</a></p>
-            <p><a class="nav-link px-3" href="#">سیاست حفظ حریم خصوصی</a></p>
-            <p><a class="nav-link px-3" href="#">سوالات متداول</a></p>
+            <p><a class="nav-link px-3" href="{{ route('rules') }}">شرایط و ضوابط</a></p>
+            <p><a class="nav-link px-3" href="{{ route('privacy') }}">سیاست حفظ حریم خصوصی</a></p>
+            <p><a class="nav-link px-3" href="{{ route('faq') }}">سوالات متداول</a></p>
         </div>
         <div class="d-flex px-3 w-250">
 
@@ -64,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item ">
-                        <a class="nav-link px-3" href="/">صفحه اصلی <span class="sr-only">(current)</span></a>
+                        <a class="nav-link px-3" href="/porseman">صفحه اصلی <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3" href="#service">امکانات</a>
@@ -93,19 +93,20 @@
             <div class="row py-5 justify-content-between align-items-center">
                 <div class="col-lg-6 col-md-10 py-5 text-right h2_center">
                     <h2 class="font-weight-bold display-5 mb-4">ساختن نظرسنجی آنلاین هیچوقت از این آسان تر نبوده.</h2>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
-                    <a href="{{ route('register') }}" class="btn btn-primary btn-size">همین حالا شروع کنید</a></div>
+                    <p>با پرسمان به راحتی انواع نظرسنجی های خود را آنلاین بسازید.</p>
+                    <a href="{{ route('register') }}" class="btn btn-primary btn-size">همین حالا شروع کنید</a>
                 </div>
             </div>
         </div>
     </div>
 
+
     <section class="section bg-grey feature-sec-1" id="service">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 align-self-center text-right order-2 order-md-1">
-                    <h2 class="section-title mb-4">ایجاد یک تجربه کاملا برند</h2>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                    <h2 class="section-title mb-4">استفاده از پرسشنامه های آماده</h2>
+                    <p>یکی از مشکلات کاربر کمبود وقت یا نداشتن الگو برای نوشتن پرسشنامه است. ما در این سایت با قرار دادن پرسشنامه آماده این دقدقه کاربر رابرطرف کردیم و تنها باانتخاب پرسشنامه آماده می توانید از آن استفاده و دروقت گرانبها خود صرفه جویی کنید.</p>
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-5 col-md-12 col-sm-12 align-self-center order-1 order-md-2">
@@ -123,8 +124,8 @@
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-6 col-md-12 col-sm-12 text-right align-self-center">
-                    <h2 class="section-title mb-4">10 نوع سوال</h2>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                    <h2 class="section-title mb-4">ساخت نظرسنجی با انواع پرسش‌ها</h2>
+                    <p>با استفاده از انواع سوالات چند گزینه ای، تشریحی کوتاه و بلند، بله و خیر، آپلود فایل و... نظرسنجی خود را ایجاد و منتشر کنید. </p>
                 </div>
             </div>
         </div>
@@ -135,7 +136,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 text-right align-self-center order-2 order-md-1">
                     <h2 class="section-title mb-4">اشتراک گذاری نظرسنجی های خود</h2>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                    <p>از مشخصه های یک فرم نظر سنجی خوب امکان به اشتراک گذاشتن در همه ی پلتفرم ها و پیام رسان هاست پرسمان به شما این امکان را می دهد که بدون دردسر و فقط با یک کلیک لینک را در پیام رسان های سروش، واتساپ، تلگرام و... به اشتراک بگذارید.</p>
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-5 col-md-12 col-sm-12 align-self-center order-1 order-md-2">
@@ -153,8 +154,8 @@
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-6 col-md-12 text-right col-sm-12 align-self-center">
-                    <h2 class="section-title mb-4">تجزیه و تحلیل پاسخ ها</h2>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                    <h2 class="section-title mb-4">سازماندهی و تجزیه و تحلیل پاسخ‌ها</h2>
+                    <p>پاسخ های شما در خود فرم قابل دسترسی است اما گاهی مرتب کردن و تجزیه و تحلیل نتایج سخت است. ما به شما این امکان را می دهیم تا نتایج را در یک صفحه گسترده ذخیره و سازماندهی کنید.</p>
                 </div>
             </div>
         </div>
@@ -164,7 +165,7 @@
     <section class="section bg-grey" id="pricing">
         <div class="text-center">
             <h2 class="mb-4">طرح های قیمت گذاری</h2>
-            <p class="px-2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+            <p class="px-2">ما در پرسمان سعی کردیم با کمترین قیمت بهترین امکانات را به کاربران ارائه دهیم شما می توانید متناسب با نیاز خود یک حساب کاربری را انتخاب کنید.</p>
         </div>
         <div class="container">
             <div class="row">
@@ -210,7 +211,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="info">
-                        <h4>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم <br>از صنعت چاپ و با استفاده از طراحان گرافیک است.</h4>
+                        <h4>همین حالا اولین نظرسنجی، فرم یا آزمون ویژه خود را ایجاد نمایید <br>و در اختیار کاربران خود قرار دهید.</h4>
                         <a class="btn btn-secondary mt-3" href="{{ route('register') }}">ایجاد حساب کاربری</a>
                     </div>
                 </div>
@@ -225,17 +226,17 @@
                     <div class="col-sm-6 col-lg-3 text-right">
                         <div class="widget widget-about">
                             <h3>پرسمان</h3>
-                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                            <p>با پرسمان به آسانی و کمتر از چند دقیقه نظرسنجی خود را بسازید و به اشتراک بگذارید.</p>
 
                             <div class="social-icons">
-                                <a href="#" class="social-icon" target="_blank" title="Facebook"><i
-                                        class="bx bxl-facebook"></i></a>
-                                <a href="#" class="social-icon" target="_blank" title="Twitter"><i
+                                <a href="https://linkedin.com/company/xaankoo" class="social-icon" target="_blank" title="linkedin"><i
+                                        class="bx bxl-linkedin"></i></a>
+                                <a href="https://twitter.com/xaankoo" class="social-icon" target="_blank" title="Twitter"><i
                                         class="bx bxl-twitter"></i></a>
-                                <a href="#" class="social-icon" target="_blank" title="Instagram"><i
-                                        class="bx bxl-instagram"></i></a>
-                                <a href="#" class="social-icon" target="_blank" title="Youtube"><i
-                                        class="bx bxl-youtube"></i></a>
+                                <a href="https://instagram.com/porseman.x" class="social-icon" target="_blank" title="Instagram"><i
+                                        class="bx bxl-instagram"></i></a>&nbsp;&nbsp;
+                                <a href="https://telegram.com/xaankoo" class="social-icon" target="_blank" title="telegram"><i
+                                        class="bx bxl-telegram"></i></a>
 
                             </div>
                         </div>
@@ -245,10 +246,9 @@
                         <div class="widget">
                             <h6 class="widget-title">آشنایی با ما</h6>
                             <ul class="widget-list">
-                                <li><a href="#">درباره ما</a></li>
-                                <li><a href="#">وبلاگ ما</a></li>
-                                <li><a href="#">خدمات</a></li>
-                                <li><a href="#">نقشه سایت</a></li>
+                                <li><a href="{{ route('about') }}">درباره ما</a></li>
+                                <li><a href="{{ route('contact') }}">ارتباط با ما</a></li>
+                                <li><a href="{{ route('register') }}">ثبت نام</a></li>
                             </ul>
                         </div>
                     </div>
@@ -257,9 +257,9 @@
                         <div class="widget">
                             <h6 class="widget-title">راهنمایی</h6>
                             <ul class="widget-list">
-                                <li><a href="#">قیمت گذاری</a></li>
-                                <li><a href="#">سوالات متداول</a></li>
-                                <li><a href="#">تماس با ما</a></li>
+                                <li><a href="#pricing">قیمت گذاری</a></li>
+                                <li><a href="#service">امکانات</a></li>
+                                <li><a href="{{ route('faq') }}">سوالات متداول</a></li>
                             </ul>
                         </div>
                     </div>
@@ -268,9 +268,8 @@
                         <div class="widget">
                             <h6 class="widget-title">خط مشی</h6>
                             <ul class="widget-list">
-                                <li><a href="#">شرایط و ضوابط</a></li>
-                                <li><a href="#">سیاست و حفظ حریف خصوصی</a></li>
-                                <li><a href="#">حفاظت از داده و محرمانگی</a></li>
+                                <li><a href="{{ route('rules') }}">شرایط و ضوابط</a></li>
+                                <li><a href="{{ route('privacy') }}">سیاست و حفظ حریم خصوصی</a></li>
                             </ul>
                         </div>
                     </div>
@@ -280,7 +279,7 @@
 
         <div class="footer-bottom">
             <div class="container text-center">
-                <p class="footer-copyright">تمامی مطالب متعلق به سایت پرنده نظرسنجی می باشد. © </p>
+                <p class="footer-copyright">توسعه داده شده توسط تیم پرسمان © 2019 – 2022. تمامی حقوق محفوظ است.</p>
             </div>
         </div>
     </footer>

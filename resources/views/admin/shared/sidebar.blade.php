@@ -1,5 +1,5 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <a href="/" class="brand-link">
+    <a href="/porseman" class="brand-link">
         <span class="brand-text font-weight-light">{{ config('app.name') }}</span>
     </a>
     <div class="sidebar">

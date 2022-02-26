@@ -1,7 +1,7 @@
 <nav class="main-header navbar navbar-expand-md navbar-light navbar-white text-right">
 	<div class="container">
-		<a href="" class="navbar-brand">
-			<img src="{{ asset('logos/dashboard-logo.png') }}" class="img-fluid">
+		<a href="#" class="navbar-brand">
+			<img src="{{ asset('logos/dashboard-logo.png') }}" class="img-fluid" style="height: 40px">
 		</a>
 
 		<button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +11,7 @@
 		<div class="collapse navbar-collapse order-3" id="navbarCollapse">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a href="/" class="nav-link">{{ __('خانه') }}</a>
+					<a href="/porseman" class="nav-link">{{ __('خانه') }}</a>
 				</li>
 				<li class="nav-item">
 					<a href="{{ route('company.surveys.index') }}" class="nav-link">{{ __('نظرسنجی های من') }}</a>

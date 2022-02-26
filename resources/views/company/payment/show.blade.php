@@ -27,7 +27,7 @@
 
                             <table class="table table-bordered">
 {{--                                @php--}}
-{{--                                    dd(settings()->get('stripesubscription_status'));--}}
+{{--                                    dd(settings());--}}
 {{--                                @endphp--}}
                                 <tbody>
                                     @if(settings()->get('stripesubscription_status'))
@@ -68,6 +68,7 @@
                             </table>
 
                             <input type="hidden" name="plan_id" value="{{ $plan->id }}">
+                            <input type="hidden" name="plan_price" value="{{ $plan->priceice }}">
 
                             <button class="btn btn-primary mt-3 btn-block" type="submit">{{ __('الان پرداخت کن') }}</button>
                         </form>

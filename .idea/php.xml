@@ -160,6 +160,7 @@
       <path value="$PROJECT_DIR$/vendor/asoltani927/laravel-mpdf-persian" />
       <path value="$PROJECT_DIR$/vendor/mpdf/mpdf" />
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/evryn/laravel-toman" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2">

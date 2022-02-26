@@ -11,7 +11,7 @@
     @endif
     <div class="register-logo">
         <a href="#">
-            <img src="{{ asset('logos/main-logo.png') }}" class="img-fluid">
+            <img src="{{ asset('logos/main-logo.png') }}" class="img-fluiFd">
         </a>
     </div>
     <div class="card">

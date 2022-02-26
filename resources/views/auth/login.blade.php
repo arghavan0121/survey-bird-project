@@ -5,7 +5,7 @@
 @section('content')
 <div class="register-box">
     <div class="register-logo">
-        <a href="/">
+        <a href="/porseman">
             <img src="{{ asset('logos/main-logo.png') }}" class="img-fluid">
         </a>
     </div>

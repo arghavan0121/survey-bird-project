@@ -11,6 +11,7 @@
         "php": "^7.2.5|^8.0",
         "asoltani927/laravel-mpdf-persian": "dev-main",
         "barryvdh/laravel-translation-manager": "^0.5.10",
+        "evryn/laravel-toman": "^2.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3.1|^7.0.1",

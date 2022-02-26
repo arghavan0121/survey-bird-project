@@ -47,6 +47,7 @@ Route::middleware(['auth', 'role:company', 'setlocale'])
 
         Route::get('payment', 'PaymentController@show')->name('payment.show');
         Route::post('payment', 'PaymentController@store')->name('payment.store');
+        Route::get('payment/callback', 'PaymentController@callback')->name('payment.callback');
 
         Route::get('notifications', 'NotificationController@index')->name('notifications.index');
         Route::get('notifications/mark-as-read', 'NotificationController@markAsRead')->name('notifications.read');
@@ -111,3 +112,17 @@ Route::get('install/finished', 'InstallApplicationController@finished')->name('i
 Route::get('scheduler', 'CronScheduleController');
 
 Route::PATCH('surveys/{survey}/update', [TemplateController::class , 'updateTemplate'])->name('isAdmin.update')->middleware('isAdmin');
+
+
+
+Route::namespace('Home')->group(function (){
+    Route::get('faq','FaqController@index')->name('faq');
+
+    Route::get('rules','RulesController@index')->name('rules');
+
+    Route::get('privacy','PrivacyController@index')->name('privacy');
+
+    Route::get('about','AboutController@index')->name('about');
+
+    Route::get('contact','ContactController@index')->name('contact');
+});

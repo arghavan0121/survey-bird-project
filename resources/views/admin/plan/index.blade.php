@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card card-outline card-success">
-                        <div class="card-header">
+                        <div class="card-header text-left">
                             <h3 class="card-title table-responsive">{{ __('طرح ها') }}</h3>
                         </div>
                             @include('admin.shared.empty', ['lists' => $plans])
