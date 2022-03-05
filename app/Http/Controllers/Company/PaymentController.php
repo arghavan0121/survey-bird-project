@@ -32,15 +32,14 @@ class PaymentController extends Controller
         $price = json_decode($plan->price);
         $email = auth()->user()->email;
         $name = auth()->user()->name;
-
         $request = Toman::orderId('order_1500')
             ->amount($price)
              ->description('Subscribing to Plan A')
-             ->callback(url("payment/callback"))
+             ->callback(url("app/payment/callback"))
              ->email($email)
              ->name($name)
             ->request();
-dd($request);
+
         if ($request->successful()) {
             $transactionId = $request->transactionId();
             // Store created transaction details for verification
@@ -50,7 +49,7 @@ dd($request);
 
         if ($request->failed()) {
             // Handle transaction request failure; Probably showing proper error to user.
-            flush();
+          return "fail";
             return  redirect();
         }
     }
@@ -60,7 +59,6 @@ dd($request);
      */
     public function callback(CallbackRequest $request)
     {
-
 //         Use $request->transactionId() and $request->orderId() to match the
         // non-paid payment. Take care of Double Spending.
 
@@ -78,6 +76,7 @@ dd($request);
         if ($payment->failed()) {
             // ...
         }
+
     }
 
 //    public function show(Request $request)

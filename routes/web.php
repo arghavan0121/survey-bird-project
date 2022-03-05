@@ -47,7 +47,7 @@ Route::middleware(['auth', 'role:company', 'setlocale'])
 
         Route::get('payment', 'PaymentController@show')->name('payment.show');
         Route::post('payment', 'PaymentController@store')->name('payment.store');
-        Route::get('payment/callback', 'PaymentController@callback')->name('payment.callback');
+        Route::post('payment/callback', 'PaymentController@callback')->name('payment.callback');
 
         Route::get('notifications', 'NotificationController@index')->name('notifications.index');
         Route::get('notifications/mark-as-read', 'NotificationController@markAsRead')->name('notifications.read');

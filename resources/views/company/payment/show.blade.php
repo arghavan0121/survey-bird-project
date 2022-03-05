@@ -68,7 +68,7 @@
                             </table>
 
                             <input type="hidden" name="plan_id" value="{{ $plan->id }}">
-                            <input type="hidden" name="plan_price" value="{{ $plan->priceice }}">
+                            <input type="hidden" name="plan_price" value="{{ $plan->price }}">
 
                             <button class="btn btn-primary mt-3 btn-block" type="submit">{{ __('الان پرداخت کن') }}</button>
                         </form>
